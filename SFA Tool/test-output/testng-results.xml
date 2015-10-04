@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Login Sucessfull]]>
+    </line>
+    <line>
+      <![CDATA[HTML Report for Profile (Invalid Profile) not exist]]>
+    </line>
+    <line>
+      <![CDATA[HTML Report for Record Type (Invalid Record Type)not found]]>
+    </line>
+    <line>
+      <![CDATA[HTML Report for Profile (Invalid Profile) not exist]]>
+    </line>
+    <line>
+      <![CDATA[HTML Report for Record Type (random Call)not found]]>
+    </line>
+    <line>
+      <![CDATA[Object :(Activity)not found in the Application]]>
+    </line>
+    <line>
+      <![CDATA[Base Line sheet for Activity not found.]]>
+    </line>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="292911" started-at="2015-10-04T13:46:22Z" finished-at="2015-10-04T13:51:15Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="292911" started-at="2015-10-04T13:46:22Z" finished-at="2015-10-04T13:51:15Z">
+      <class name="com.email.scripts.GetFieldsAcceble">
+        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.email.scripts.GetFieldsAcceble@14899482]" name="preCondition" is-config="true" duration-ms="30039" started-at="2015-10-04T19:16:22Z" finished-at="2015-10-04T19:16:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preCondition -->
+        <test-method status="PASS" signature="getFields()[pri:0, instance:com.email.scripts.GetFieldsAcceble@14899482]" name="getFields" duration-ms="259978" started-at="2015-10-04T19:16:52Z" finished-at="2015-10-04T19:21:12Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Login Sucessfull]]>
+            </line>
+            <line>
+              <![CDATA[HTML Report for Profile (Invalid Profile) not exist]]>
+            </line>
+            <line>
+              <![CDATA[HTML Report for Record Type (Invalid Record Type)not found]]>
+            </line>
+            <line>
+              <![CDATA[HTML Report for Profile (Invalid Profile) not exist]]>
+            </line>
+            <line>
+              <![CDATA[HTML Report for Record Type (random Call)not found]]>
+            </line>
+            <line>
+              <![CDATA[Object :(Activity)not found in the Application]]>
+            </line>
+            <line>
+              <![CDATA[Base Line sheet for Activity not found.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- getFields -->
+        <test-method status="PASS" signature="postCondition()[pri:0, instance:com.email.scripts.GetFieldsAcceble@14899482]" name="postCondition" is-config="true" duration-ms="2854" started-at="2015-10-04T19:21:12Z" finished-at="2015-10-04T19:21:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCondition -->
+      </class> <!-- com.email.scripts.GetFieldsAcceble -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
