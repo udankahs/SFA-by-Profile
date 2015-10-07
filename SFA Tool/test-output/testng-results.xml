@@ -5,10 +5,70 @@
       <![CDATA[Login Sucessfull]]>
     </line>
     <line>
+      <![CDATA[PASS]]>
+    </line>
+    <line>
+      <![CDATA[FAIL]]>
+    </line>
+    <line>
+      <![CDATA[PASS]]>
+    </line>
+    <line>
+      <![CDATA[PASS]]>
+    </line>
+    <line>
+      <![CDATA[PASS]]>
+    </line>
+    <line>
+      <![CDATA[PASS]]>
+    </line>
+    <line>
+      <![CDATA[PASS]]>
+    </line>
+    <line>
+      <![CDATA[FAIL]]>
+    </line>
+    <line>
+      <![CDATA[PASS]]>
+    </line>
+    <line>
+      <![CDATA[PASS]]>
+    </line>
+    <line>
       <![CDATA[HTML Report for Profile (Invalid Profile) not exist]]>
     </line>
     <line>
       <![CDATA[HTML Report for Record Type (Invalid Record Type)not found]]>
+    </line>
+    <line>
+      <![CDATA[PASS]]>
+    </line>
+    <line>
+      <![CDATA[PASS]]>
+    </line>
+    <line>
+      <![CDATA[PASS]]>
+    </line>
+    <line>
+      <![CDATA[PASS]]>
+    </line>
+    <line>
+      <![CDATA[PASS]]>
+    </line>
+    <line>
+      <![CDATA[PASS]]>
+    </line>
+    <line>
+      <![CDATA[PASS]]>
+    </line>
+    <line>
+      <![CDATA[PASS]]>
+    </line>
+    <line>
+      <![CDATA[PASS]]>
+    </line>
+    <line>
+      <![CDATA[PASS]]>
     </line>
     <line>
       <![CDATA[HTML Report for Profile (Invalid Profile) not exist]]>
@@ -23,25 +83,85 @@
       <![CDATA[Base Line sheet for Activity not found.]]>
     </line>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="292911" started-at="2015-10-04T13:46:22Z" finished-at="2015-10-04T13:51:15Z">
+  <suite name="Command line suite" duration-ms="252890" started-at="2015-10-07T16:45:05Z" finished-at="2015-10-07T16:49:18Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="292911" started-at="2015-10-04T13:46:22Z" finished-at="2015-10-04T13:51:15Z">
+    <test name="Command line test" duration-ms="252890" started-at="2015-10-07T16:45:05Z" finished-at="2015-10-07T16:49:18Z">
       <class name="com.email.scripts.GetFieldsAcceble">
-        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.email.scripts.GetFieldsAcceble@14899482]" name="preCondition" is-config="true" duration-ms="30039" started-at="2015-10-04T19:16:22Z" finished-at="2015-10-04T19:16:52Z">
+        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.email.scripts.GetFieldsAcceble@14899482]" name="preCondition" is-config="true" duration-ms="22465" started-at="2015-10-07T22:15:05Z" finished-at="2015-10-07T22:15:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method status="PASS" signature="getFields()[pri:0, instance:com.email.scripts.GetFieldsAcceble@14899482]" name="getFields" duration-ms="259978" started-at="2015-10-04T19:16:52Z" finished-at="2015-10-04T19:21:12Z">
+        <test-method status="PASS" signature="getFields()[pri:0, instance:com.email.scripts.GetFieldsAcceble@14899482]" name="getFields" duration-ms="227736" started-at="2015-10-07T22:15:27Z" finished-at="2015-10-07T22:19:15Z">
           <reporter-output>
             <line>
               <![CDATA[Login Sucessfull]]>
+            </line>
+            <line>
+              <![CDATA[PASS]]>
+            </line>
+            <line>
+              <![CDATA[FAIL]]>
+            </line>
+            <line>
+              <![CDATA[PASS]]>
+            </line>
+            <line>
+              <![CDATA[PASS]]>
+            </line>
+            <line>
+              <![CDATA[PASS]]>
+            </line>
+            <line>
+              <![CDATA[PASS]]>
+            </line>
+            <line>
+              <![CDATA[PASS]]>
+            </line>
+            <line>
+              <![CDATA[FAIL]]>
+            </line>
+            <line>
+              <![CDATA[PASS]]>
+            </line>
+            <line>
+              <![CDATA[PASS]]>
             </line>
             <line>
               <![CDATA[HTML Report for Profile (Invalid Profile) not exist]]>
             </line>
             <line>
               <![CDATA[HTML Report for Record Type (Invalid Record Type)not found]]>
+            </line>
+            <line>
+              <![CDATA[PASS]]>
+            </line>
+            <line>
+              <![CDATA[PASS]]>
+            </line>
+            <line>
+              <![CDATA[PASS]]>
+            </line>
+            <line>
+              <![CDATA[PASS]]>
+            </line>
+            <line>
+              <![CDATA[PASS]]>
+            </line>
+            <line>
+              <![CDATA[PASS]]>
+            </line>
+            <line>
+              <![CDATA[PASS]]>
+            </line>
+            <line>
+              <![CDATA[PASS]]>
+            </line>
+            <line>
+              <![CDATA[PASS]]>
+            </line>
+            <line>
+              <![CDATA[PASS]]>
             </line>
             <line>
               <![CDATA[HTML Report for Profile (Invalid Profile) not exist]]>
@@ -57,7 +177,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- getFields -->
-        <test-method status="PASS" signature="postCondition()[pri:0, instance:com.email.scripts.GetFieldsAcceble@14899482]" name="postCondition" is-config="true" duration-ms="2854" started-at="2015-10-04T19:21:12Z" finished-at="2015-10-04T19:21:15Z">
+        <test-method status="PASS" signature="postCondition()[pri:0, instance:com.email.scripts.GetFieldsAcceble@14899482]" name="postCondition" is-config="true" duration-ms="2651" started-at="2015-10-07T22:19:15Z" finished-at="2015-10-07T22:19:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCondition -->

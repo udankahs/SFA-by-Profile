@@ -48,7 +48,7 @@ public class SFDCLogin
 		
 		if (errorDisplayed)
 		{
-			Reporter.log("Login Failed", false);
+			Reporter.log("Login Failed", true);
 			login= false;
 		}
 		else 

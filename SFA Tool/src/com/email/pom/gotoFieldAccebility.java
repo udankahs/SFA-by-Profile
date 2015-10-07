@@ -1,8 +1,15 @@
 package com.email.pom;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -59,7 +66,12 @@ public class gotoFieldAccebility {
 	String profile = null;
 	String rcdType = null;
 	String field = null;
-	String state = null;
+	String targetState = null;
+	String BaselineProfile = null;
+	String SourceState = null;
+
+	int baselineProfileIndex = 0;
+	int noOfColumns = 0;
 
 	public gotoFieldAccebility(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -96,13 +108,14 @@ public class gotoFieldAccebility {
 		}
 
 		else {
-			Reporter.log("Object :(" + Obj + ")not found in the Application", false);
-			reached = false;
+			Reporter.log("Object :(" + Obj + ")not found in the Application", true);
+			reached = true;
 		}
 		return reached;
 	}
 
-	public void getFieldAaccebilty(String obj, String objxlPath, String fieldXlpath) throws InterruptedException {
+	public void getFieldAaccebilty(String obj, String objxlPath, String fieldXlpath)
+			throws InterruptedException, InvalidFormatException, FileNotFoundException, IOException {
 
 		int recTypeCount = ExcelLib.getRowCount(objxlPath, obj);
 		System.out.println("recTypeCount :" + recTypeCount);
@@ -113,9 +126,35 @@ public class gotoFieldAccebility {
 				new Select(RecordType).selectByVisibleText(rcdType);
 				Thread.sleep(5000);
 
+				try{
+				noOfColumns = WorkbookFactory.create(new FileInputStream(fieldXlpath)).getSheet(rcdType).getRow(0)
+						.getPhysicalNumberOfCells();
+				System.out.println("noOfColumns :" + noOfColumns);
+				}
+				catch (NullPointerException e)
+				{
+					System.out.println("Invalid Record Type");
+				}
 				for (int k = 1; k <= recTypeCount; k++) {
 
 					profile = ExcelLib.getCellValue(objxlPath, obj, k, 1);
+
+					try{
+					for (int l = 0; l <= noOfColumns; l++) {
+						if (ExcelLib.getCellValue(fieldXlpath, rcdType, 0, l).equals(profile)) {
+							BaselineProfile = profile;
+							baselineProfileIndex = l;
+							break;
+						}
+					}}
+					catch (NullPointerException e)
+					{
+						Reporter.log("Invalid Profile", true);
+					}
+
+					System.out.println("BaselineProfile :" + BaselineProfile);
+					System.out.println("baselineProfileIndex :" + baselineProfileIndex);
+
 					List<WebElement> allProfile = driver.findElements(By.xpath("//table/tbody/tr[5]/th"));
 					if (driver.findElements(By.xpath("//table/tbody/tr[5]/th[text()='" + profile + "']")).size() > 0) {
 						WebElement option = driver
@@ -124,8 +163,8 @@ public class gotoFieldAccebility {
 						System.out.println("option " + option);
 
 						if (allProfile.contains(option)) {
-							int fieldIndex = allProfile.indexOf(option);
-							System.out.println("fieldIndex " + fieldIndex);
+							int profileIndex = allProfile.indexOf(option);
+							System.out.println("ProfileIndex " + profileIndex);
 							try {
 								int fieldCount = ExcelLib.getRowCount(fieldXlpath, rcdType);
 
@@ -134,34 +173,45 @@ public class gotoFieldAccebility {
 								for (int j = 1; j <= fieldCount; j++) {
 									field = ExcelLib.getCellValue(fieldXlpath, rcdType, j, 0);
 									try {
-										state = driver
+										targetState = driver
 												.findElement(By.xpath(
-														"//th[text()='" + field + "']/../td[" + fieldIndex + "]/a"))
+														"//th[text()='" + field + "']/../td[" + profileIndex + "]/a"))
 												.getText();
+
+										SourceState = ExcelLib.getCellValue(fieldXlpath, rcdType, j,
+												baselineProfileIndex);
+
+										System.out.println("field ("+field + ") : SourceState ("+SourceState+") : targetState(" + targetState+")");
 										
-										ExcelLib.writeExcel("src/Output Excel_Account.xls", rcdType, j, 0, field);
-										ExcelLib.writeExcel("src/Output Excel_Account.xls", rcdType, j, k, state);
-										System.out.println(field + " : " + state);
+										if (SourceState.equals(targetState))
+										{
+											Reporter.log("PASS", true);
+										}
+										else
+										{
+											Reporter.log("FAIL", true);
+										}
+										
 									} catch (NoSuchElementException e) {
-										Reporter.log("HTML report for field (" + field + ") not exist", false);
+										Reporter.log("HTML report for field (" + field + ") not exist", true);
 									} catch (Exception e) {
 										// TODO Auto-generated catch block
 										e.printStackTrace();
 									}
 								}
 							} catch (NullPointerException e) {
-								Reporter.log("HTML report for sheet (" + rcdType + ") not exist", false);
+								Reporter.log("HTML report for sheet (" + rcdType + ") not exist", true);
 							}
 						}
 					}
 
 					else {
-						Reporter.log("HTML Report for Profile (" + profile + ") not exist", false);
+						Reporter.log("HTML Report for Profile (" + profile + ") not exist", true);
 					}
 				}
 
 			} catch (NoSuchElementException e) {
-				Reporter.log("HTML Report for Record Type (" + rcdType + ")not found", false);
+				Reporter.log("HTML Report for Record Type (" + rcdType + ")not found", true);
 			}
 		}
 	}
