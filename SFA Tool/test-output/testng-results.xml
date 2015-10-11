@@ -2,186 +2,216 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Login Sucessfull]]>
+      <![CDATA[<table><tr><th><b>Login Status: </th><td>Login Succesfull</table>]]>
     </line>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[<table><tr><th><b> Number of Objects taken for this Execution: </b></th><td>2</table></br></br>]]>
     </line>
     <line>
-      <![CDATA[FAIL]]>
+      <![CDATA[<table>]]>
     </line>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[]]>
     </line>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[<tr><th><b>OBJECT TESTING: </b></th><td>Account<td></table></br>]]>
     </line>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[]]>
     </line>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[<table><tr><th>Record Type: </th><td>Prescriber</td></tr></table>]]>
     </line>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[<table><tr><th>Profile: </th><td>Abbott CAM Administrator</td></tr></table>]]>
     </line>
     <line>
-      <![CDATA[FAIL]]>
+      <![CDATA[<style>table, th, td { border: 1px solid black;    border-collapse: collapse;}</style><table><tr bgcolor='#2EB8E6'><th>Fields</th><th>Source (Baseline Excel)  </th><th>Target (Application)  </th><th>Result</th></tr>]]>
     </line>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[<tr><th bgcolor='gray'><b># Beds</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
     </line>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[<tr><th bgcolor='gray'><b># Billing</b></th><td> Editable</td><td>Hidden</td><th> <font color='red'><b> FALSE </b></font><br/></th></tr>]]>
     </line>
     <line>
-      <![CDATA[HTML Report for Profile (Invalid Profile) not exist]]>
+      <![CDATA[<tr><th bgcolor='gray'><b># Departments</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
     </line>
     <line>
-      <![CDATA[HTML Report for Record Type (Invalid Record Type)not found]]>
+      <![CDATA[<tr><th bgcolor='gray'><b># Employees</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
     </line>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[<tr><th bgcolor='gray'><b># Endometrial Procedures</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
     </line>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[<tr><th bgcolor='gray'><b># Fellows</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
     </line>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[<tr><th bgcolor='gray'><b># Hospitals Serviced</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
     </line>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[<tr><th bgcolor='gray'><b># Infusion Chairs</b></th><td> Read-Only</td><td>Hidden</td><th> <font color='red'><b> FALSE </b></font><br/></th></tr>]]>
     </line>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[<tr><th bgcolor='gray'><b># NPs</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
     </line>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[<tr><th bgcolor='gray'><b># Nurse Navigators</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
     </line>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[</table></br>]]>
     </line>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[<table><tr><th>Profile: </th><td>Invalid Account Profile</td></tr></table>]]>
     </line>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[]]>
     </line>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[<table><tr><th><font color='red'><b>ERROR: </b></th><td> Profile (Invalid Account Profile) not found in the Application </td></tr></table>]]>
     </line>
     <line>
-      <![CDATA[HTML Report for Profile (Invalid Profile) not exist]]>
+      <![CDATA[<table><tr><th>Record Type: </th><td>Invalid Account Record Type</td></tr></table>]]>
     </line>
     <line>
-      <![CDATA[HTML Report for Record Type (random Call)not found]]>
+      <![CDATA[]]>
     </line>
     <line>
-      <![CDATA[Object :(Activity)not found in the Application]]>
+      <![CDATA[<table><tr>th><font color='red'><b>ERROR: </b></th><td> Record Type (Invalid Account Record Type) not found in the Application </td></tr></table></br></br>]]>
     </line>
     <line>
-      <![CDATA[Base Line sheet for Activity not found.]]>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[<tr><th><b>OBJECT TESTING: </b></th><td>Activity<td></table></br>]]>
+    </line>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[</br><table><tr><th><font color='red'><b>ERROR: </b></th><td> Object (Activity) not found in the Application </td></tr></table> ]]>
+    </line>
+    <line>
+      <![CDATA[<table><tr><th><b>ERROR: </b></th><td> Baseline sheet for Activity not found</td></table>]]>
     </line>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="252890" started-at="2015-10-07T16:45:05Z" finished-at="2015-10-07T16:49:18Z">
+  <suite name="Default suite" duration-ms="108285" started-at="2015-10-11T08:44:41Z" finished-at="2015-10-11T08:46:30Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="252890" started-at="2015-10-07T16:45:05Z" finished-at="2015-10-07T16:49:18Z">
+    <test name="Default test" duration-ms="108285" started-at="2015-10-11T08:44:41Z" finished-at="2015-10-11T08:46:30Z">
       <class name="com.email.scripts.GetFieldsAcceble">
-        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.email.scripts.GetFieldsAcceble@14899482]" name="preCondition" is-config="true" duration-ms="22465" started-at="2015-10-07T22:15:05Z" finished-at="2015-10-07T22:15:27Z">
+        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.email.scripts.GetFieldsAcceble@3930015a]" name="preCondition" is-config="true" duration-ms="7262" started-at="2015-10-11T14:14:41Z" finished-at="2015-10-11T14:14:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method status="PASS" signature="getFields()[pri:0, instance:com.email.scripts.GetFieldsAcceble@14899482]" name="getFields" duration-ms="227736" started-at="2015-10-07T22:15:27Z" finished-at="2015-10-07T22:19:15Z">
+        <test-method status="PASS" signature="getFields()[pri:0, instance:com.email.scripts.GetFieldsAcceble@3930015a]" name="getFields" duration-ms="96912" started-at="2015-10-11T14:14:49Z" finished-at="2015-10-11T14:16:26Z">
           <reporter-output>
             <line>
-              <![CDATA[Login Sucessfull]]>
+              <![CDATA[<table><tr><th><b>Login Status: </th><td>Login Succesfull</table>]]>
             </line>
             <line>
-              <![CDATA[PASS]]>
+              <![CDATA[<table><tr><th><b> Number of Objects taken for this Execution: </b></th><td>2</table></br></br>]]>
             </line>
             <line>
-              <![CDATA[FAIL]]>
+              <![CDATA[<table>]]>
             </line>
             <line>
-              <![CDATA[PASS]]>
+              <![CDATA[]]>
             </line>
             <line>
-              <![CDATA[PASS]]>
+              <![CDATA[<tr><th><b>OBJECT TESTING: </b></th><td>Account<td></table></br>]]>
             </line>
             <line>
-              <![CDATA[PASS]]>
+              <![CDATA[]]>
             </line>
             <line>
-              <![CDATA[PASS]]>
+              <![CDATA[<table><tr><th>Record Type: </th><td>Prescriber</td></tr></table>]]>
             </line>
             <line>
-              <![CDATA[PASS]]>
+              <![CDATA[<table><tr><th>Profile: </th><td>Abbott CAM Administrator</td></tr></table>]]>
             </line>
             <line>
-              <![CDATA[FAIL]]>
+              <![CDATA[<style>table, th, td { border: 1px solid black;    border-collapse: collapse;}</style><table><tr bgcolor='#2EB8E6'><th>Fields</th><th>Source (Baseline Excel)  </th><th>Target (Application)  </th><th>Result</th></tr>]]>
             </line>
             <line>
-              <![CDATA[PASS]]>
+              <![CDATA[<tr><th bgcolor='gray'><b># Beds</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
             </line>
             <line>
-              <![CDATA[PASS]]>
+              <![CDATA[<tr><th bgcolor='gray'><b># Billing</b></th><td> Editable</td><td>Hidden</td><th> <font color='red'><b> FALSE </b></font><br/></th></tr>]]>
             </line>
             <line>
-              <![CDATA[HTML Report for Profile (Invalid Profile) not exist]]>
+              <![CDATA[<tr><th bgcolor='gray'><b># Departments</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
             </line>
             <line>
-              <![CDATA[HTML Report for Record Type (Invalid Record Type)not found]]>
+              <![CDATA[<tr><th bgcolor='gray'><b># Employees</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
             </line>
             <line>
-              <![CDATA[PASS]]>
+              <![CDATA[<tr><th bgcolor='gray'><b># Endometrial Procedures</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
             </line>
             <line>
-              <![CDATA[PASS]]>
+              <![CDATA[<tr><th bgcolor='gray'><b># Fellows</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
             </line>
             <line>
-              <![CDATA[PASS]]>
+              <![CDATA[<tr><th bgcolor='gray'><b># Hospitals Serviced</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
             </line>
             <line>
-              <![CDATA[PASS]]>
+              <![CDATA[<tr><th bgcolor='gray'><b># Infusion Chairs</b></th><td> Read-Only</td><td>Hidden</td><th> <font color='red'><b> FALSE </b></font><br/></th></tr>]]>
             </line>
             <line>
-              <![CDATA[PASS]]>
+              <![CDATA[<tr><th bgcolor='gray'><b># NPs</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
             </line>
             <line>
-              <![CDATA[PASS]]>
+              <![CDATA[<tr><th bgcolor='gray'><b># Nurse Navigators</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
             </line>
             <line>
-              <![CDATA[PASS]]>
+              <![CDATA[</table></br>]]>
             </line>
             <line>
-              <![CDATA[PASS]]>
+              <![CDATA[<table><tr><th>Profile: </th><td>Invalid Account Profile</td></tr></table>]]>
             </line>
             <line>
-              <![CDATA[PASS]]>
+              <![CDATA[]]>
             </line>
             <line>
-              <![CDATA[PASS]]>
+              <![CDATA[<table><tr><th><font color='red'><b>ERROR: </b></th><td> Profile (Invalid Account Profile) not found in the Application </td></tr></table>]]>
             </line>
             <line>
-              <![CDATA[HTML Report for Profile (Invalid Profile) not exist]]>
+              <![CDATA[<table><tr><th>Record Type: </th><td>Invalid Account Record Type</td></tr></table>]]>
             </line>
             <line>
-              <![CDATA[HTML Report for Record Type (random Call)not found]]>
+              <![CDATA[]]>
             </line>
             <line>
-              <![CDATA[Object :(Activity)not found in the Application]]>
+              <![CDATA[<table><tr>th><font color='red'><b>ERROR: </b></th><td> Record Type (Invalid Account Record Type) not found in the Application </td></tr></table></br></br>]]>
             </line>
             <line>
-              <![CDATA[Base Line sheet for Activity not found.]]>
+              <![CDATA[]]>
+            </line>
+            <line>
+              <![CDATA[<tr><th><b>OBJECT TESTING: </b></th><td>Activity<td></table></br>]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+            <line>
+              <![CDATA[</br><table><tr><th><font color='red'><b>ERROR: </b></th><td> Object (Activity) not found in the Application </td></tr></table> ]]>
+            </line>
+            <line>
+              <![CDATA[<table><tr><th><b>ERROR: </b></th><td> Baseline sheet for Activity not found</td></table>]]>
             </line>
           </reporter-output>
         </test-method> <!-- getFields -->
-        <test-method status="PASS" signature="postCondition()[pri:0, instance:com.email.scripts.GetFieldsAcceble@14899482]" name="postCondition" is-config="true" duration-ms="2651" started-at="2015-10-07T22:19:15Z" finished-at="2015-10-07T22:19:18Z">
+        <test-method status="PASS" signature="postCondition()[pri:0, instance:com.email.scripts.GetFieldsAcceble@3930015a]" name="postCondition" is-config="true" duration-ms="4060" started-at="2015-10-11T14:16:26Z" finished-at="2015-10-11T14:16:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCondition -->
       </class> <!-- com.email.scripts.GetFieldsAcceble -->
-    </test> <!-- Command line test -->
-  </suite> <!-- Command line suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

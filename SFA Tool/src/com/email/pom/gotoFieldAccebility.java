@@ -7,8 +7,6 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -69,6 +67,7 @@ public class gotoFieldAccebility {
 	String targetState = null;
 	String BaselineProfile = null;
 	String SourceState = null;
+	String Result, Color = null;
 
 	int baselineProfileIndex = 0;
 	int noOfColumns = 0;
@@ -108,7 +107,8 @@ public class gotoFieldAccebility {
 		}
 
 		else {
-			Reporter.log("Object :(" + Obj + ")not found in the Application", true);
+			Reporter.log("", true);
+			Reporter.log("</br><table><tr><th><font color='red'><b>ERROR: </b></th><td> Object (" + Obj + ") not found in the Application </td></tr></table> ", true);
 			reached = true;
 		}
 		return reached;
@@ -121,35 +121,26 @@ public class gotoFieldAccebility {
 		System.out.println("recTypeCount :" + recTypeCount);
 		for (int i = 1; i <= recTypeCount; i++) {
 			rcdType = ExcelLib.getCellValue(objxlPath, obj, i, 0);
+			Reporter.log("<table><tr><th>Record Type: </th><td>"+rcdType+"</td></tr></table>", true);
 			try {
 
 				new Select(RecordType).selectByVisibleText(rcdType);
 				Thread.sleep(5000);
 
-				try{
 				noOfColumns = WorkbookFactory.create(new FileInputStream(fieldXlpath)).getSheet(rcdType).getRow(0)
 						.getPhysicalNumberOfCells();
 				System.out.println("noOfColumns :" + noOfColumns);
-				}
-				catch (NullPointerException e)
-				{
-					System.out.println("Invalid Record Type");
-				}
+
 				for (int k = 1; k <= recTypeCount; k++) {
 
 					profile = ExcelLib.getCellValue(objxlPath, obj, k, 1);
-
-					try{
+					Reporter.log("<table><tr><th>Profile: </th><td>"+profile+"</td></tr></table>", true);
 					for (int l = 0; l <= noOfColumns; l++) {
 						if (ExcelLib.getCellValue(fieldXlpath, rcdType, 0, l).equals(profile)) {
 							BaselineProfile = profile;
 							baselineProfileIndex = l;
 							break;
 						}
-					}}
-					catch (NullPointerException e)
-					{
-						Reporter.log("Invalid Profile", true);
 					}
 
 					System.out.println("BaselineProfile :" + BaselineProfile);
@@ -165,11 +156,12 @@ public class gotoFieldAccebility {
 						if (allProfile.contains(option)) {
 							int profileIndex = allProfile.indexOf(option);
 							System.out.println("ProfileIndex " + profileIndex);
+							
 							try {
 								int fieldCount = ExcelLib.getRowCount(fieldXlpath, rcdType);
 
 								System.out.println("rowcount " + fieldCount);
-
+								Reporter.log("<style>table, th, td { border: 1px solid black;    border-collapse: collapse;}</style><table><tr bgcolor='#2EB8E6'><th>Fields</th><th>Source (Baseline Excel)  </th><th>Target (Application)  </th><th>Result</th></tr>");
 								for (int j = 1; j <= fieldCount; j++) {
 									field = ExcelLib.getCellValue(fieldXlpath, rcdType, j, 0);
 									try {
@@ -180,38 +172,44 @@ public class gotoFieldAccebility {
 
 										SourceState = ExcelLib.getCellValue(fieldXlpath, rcdType, j,
 												baselineProfileIndex);
+										if (SourceState.equals(targetState)) 
+										{ Result = "PASS";	
+										Color = "green";} 
+										else { Result = "FALSE";
+										Color = "red";
+										}
+											
+											Reporter.log("<tr><th bgcolor='gray'><b>" + field + "</b></th><td> " + SourceState + "</td><td>"
+													+ targetState
+													+ "</td><th> <font color='"+Color+"'><b> "+Result+" </b></font><br/></th></tr>",
+											true);
 
-										System.out.println("field ("+field + ") : SourceState ("+SourceState+") : targetState(" + targetState+")");
-										
-										if (SourceState.equals(targetState))
-										{
-											Reporter.log("PASS", true);
-										}
-										else
-										{
-											Reporter.log("FAIL", true);
-										}
-										
 									} catch (NoSuchElementException e) {
-										Reporter.log("HTML report for field (" + field + ") not exist", true);
-									} catch (Exception e) {
-										// TODO Auto-generated catch block
-										e.printStackTrace();
+										Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Field (" + field + ") not found in the Application </td></tr></table>",true);
 									}
+									// catch (Exception e) {
+									// // TODO Auto-generated catch block
+									// e.printStackTrace();
+									// }
 								}
+								
+								Reporter.log("</table></br>");
 							} catch (NullPointerException e) {
-								Reporter.log("HTML report for sheet (" + rcdType + ") not exist", true);
+								Reporter.log("", true);
+								Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Sheet (" + rcdType+ ") not found in the Data Sheet for the selected Object </td></tr></table>", true);
 							}
 						}
 					}
 
 					else {
-						Reporter.log("HTML Report for Profile (" + profile + ") not exist", true);
+						Reporter.log("", true);
+						Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Profile (" + profile + ") not found in the Application </td></tr></table>", true);
 					}
 				}
 
 			} catch (NoSuchElementException e) {
-				Reporter.log("HTML Report for Record Type (" + rcdType + ")not found", true);
+				Reporter.log("", true);
+				Reporter.log("<table><tr>th><font color='red'><b>ERROR: </b></th><td> Record Type (" + rcdType + ") not found in the Application </td></tr></table></br></br>", true);
 			}
 		}
 	}
