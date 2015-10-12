@@ -1,49 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[<table><tr><th><b>Login Status: </th ><td bgcolor='green'>Login Succesfull</td></tr></table>]]>
+    </line>
+    <line>
+      <![CDATA[<table><tr><th><b> Number of Objects taken for this Execution: </b></th><td>-1</table></br></br>]]>
+    </line>
+    <line>
+      <![CDATA[<table>]]>
+    </line>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="10" started-at="2015-10-12T12:40:28Z" finished-at="2015-10-12T12:40:28Z">
+  <suite name="Default suite" duration-ms="32305" started-at="2015-10-12T15:30:38Z" finished-at="2015-10-12T15:31:11Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="10" started-at="2015-10-12T12:40:28Z" finished-at="2015-10-12T12:40:28Z">
+    <test name="Default test" duration-ms="32305" started-at="2015-10-12T15:30:38Z" finished-at="2015-10-12T15:31:11Z">
       <class name="com.email.scripts.GetFieldsAcceble">
-        <test-method status="FAIL" signature="getFields(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.email.scripts.GetFieldsAcceble@1192d32]" name="getFields" duration-ms="0" started-at="2015-10-12T18:10:28Z" finished-at="2015-10-12T18:10:28Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Method getFields requires 4 parameters but 0 were supplied in the @Test annotation.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Method getFields requires 4 parameters but 0 were supplied in the @Test annotation.
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:198)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:134)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:373)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:450)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at com.email.scripts.SFA_Main.main(SFA_Main.java:21)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.email.scripts.GetFieldsAcceble@1c53fd30]" name="preCondition" is-config="true" duration-ms="6358" started-at="2015-10-12T21:00:38Z" finished-at="2015-10-12T21:00:45Z">
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- preCondition -->
+        <test-method status="PASS" signature="getFields()[pri:0, instance:com.email.scripts.GetFieldsAcceble@1c53fd30]" name="getFields" duration-ms="22596" started-at="2015-10-12T21:00:45Z" finished-at="2015-10-12T21:01:07Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<table><tr><th><b>Login Status: </th ><td bgcolor='green'>Login Succesfull</td></tr></table>]]>
+            </line>
+            <line>
+              <![CDATA[<table><tr><th><b> Number of Objects taken for this Execution: </b></th><td>-1</table></br></br>]]>
+            </line>
+            <line>
+              <![CDATA[<table>]]>
+            </line>
+          </reporter-output>
         </test-method> <!-- getFields -->
+        <test-method status="PASS" signature="postCondition()[pri:0, instance:com.email.scripts.GetFieldsAcceble@1c53fd30]" name="postCondition" is-config="true" duration-ms="3306" started-at="2015-10-12T21:01:07Z" finished-at="2015-10-12T21:01:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCondition -->
       </class> <!-- com.email.scripts.GetFieldsAcceble -->
-    </test> <!-- Command line test -->
-  </suite> <!-- Command line suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -108,7 +108,8 @@ public class gotoFieldAccebility {
 
 		else {
 			Reporter.log("", true);
-			Reporter.log("</br><table><tr><th><font color='red'><b>ERROR: </b></th><td> Object (" + Obj + ") not found in the Application </td></tr></table> ", true);
+			Reporter.log("</br><table><tr><th><font color='red'><b>ERROR: </b></th><td> Object (" + Obj
+					+ ") not found in the Application </td></tr></table> ", true);
 			reached = true;
 		}
 		return reached;
@@ -121,7 +122,7 @@ public class gotoFieldAccebility {
 		System.out.println("recTypeCount :" + recTypeCount);
 		for (int i = 1; i <= recTypeCount; i++) {
 			rcdType = ExcelLib.getCellValue(objxlPath, obj, i, 0);
-			Reporter.log("<table><tr><th>Record Type: </th><td>"+rcdType+"</td></tr></table>", true);
+			Reporter.log("<table><tr><th>Record Type: </th><td>" + rcdType + "</td></tr></table>", true);
 			try {
 
 				new Select(RecordType).selectByVisibleText(rcdType);
@@ -134,7 +135,7 @@ public class gotoFieldAccebility {
 				for (int k = 1; k <= recTypeCount; k++) {
 
 					profile = ExcelLib.getCellValue(objxlPath, obj, k, 1);
-					Reporter.log("<table><tr><th>Profile: </th><td>"+profile+"</td></tr></table>", true);
+					Reporter.log("<table><tr><th>Profile: </th><td>" + profile + "</td></tr></table>", true);
 					for (int l = 0; l <= noOfColumns; l++) {
 						if (ExcelLib.getCellValue(fieldXlpath, rcdType, 0, l).equals(profile)) {
 							BaselineProfile = profile;
@@ -156,12 +157,13 @@ public class gotoFieldAccebility {
 						if (allProfile.contains(option)) {
 							int profileIndex = allProfile.indexOf(option);
 							System.out.println("ProfileIndex " + profileIndex);
-							
+
 							try {
 								int fieldCount = ExcelLib.getRowCount(fieldXlpath, rcdType);
 
 								System.out.println("rowcount " + fieldCount);
-								Reporter.log("<style>table, th, td { border: 1px solid black;    border-collapse: collapse;}</style><table><tr bgcolor='#2EB8E6'><th>Fields</th><th>Source (Baseline Excel)  </th><th>Target (Application)  </th><th>Result</th></tr>");
+								Reporter.log(
+										"<style>table, th, td { border: 1px solid black;    border-collapse: collapse;}</style><table><tr bgcolor='#2EB8E6'><th>Fields</th><th>Source (Baseline Excel)  </th><th>Target (Application)  </th><th>Result</th></tr>");
 								for (int j = 1; j <= fieldCount; j++) {
 									field = ExcelLib.getCellValue(fieldXlpath, rcdType, j, 0);
 									try {
@@ -172,44 +174,52 @@ public class gotoFieldAccebility {
 
 										SourceState = ExcelLib.getCellValue(fieldXlpath, rcdType, j,
 												baselineProfileIndex);
-										if (SourceState.equals(targetState)) 
-										{ Result = "PASS";	
-										Color = "green";} 
-										else { Result = "FALSE";
-										Color = "red";
+										if (SourceState.equals(targetState)) {
+											Result = "PASS";
+											Color = "green";
+										} else {
+											Result = "FALSE";
+											Color = "red";
 										}
-											
-											Reporter.log("<tr><th bgcolor='gray'><b>" + field + "</b></th><td> " + SourceState + "</td><td>"
-													+ targetState
-													+ "</td><th> <font color='"+Color+"'><b> "+Result+" </b></font><br/></th></tr>",
-											true);
+
+										Reporter.log("<tr><th bgcolor='gray'><b>" + field + "</b></th><td> "
+												+ SourceState + "</td><td>" + targetState + "</td><th> <font color='"
+												+ Color + "'><b> " + Result + " </b></font><br/></th></tr>", true);
 
 									} catch (NoSuchElementException e) {
-										Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Field (" + field + ") not found in the Application </td></tr></table>",true);
+										Reporter.log(
+												"<table><tr><th><font color='red'><b>ERROR: </b></th><td> Field ("
+														+ field + ") not found in the Application </td></tr></table>",
+												true);
 									}
 									// catch (Exception e) {
 									// // TODO Auto-generated catch block
 									// e.printStackTrace();
 									// }
 								}
-								
+
 								Reporter.log("</table></br>");
 							} catch (NullPointerException e) {
 								Reporter.log("", true);
-								Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Sheet (" + rcdType+ ") not found in the Data Sheet for the selected Object </td></tr></table>", true);
+								Reporter.log(
+										"<table><tr><th><font color='red'><b>ERROR: </b></th><td> Sheet (" + rcdType
+												+ ") not found in the Data Sheet for the selected Object </td></tr></table>",
+										true);
 							}
 						}
 					}
 
 					else {
 						Reporter.log("", true);
-						Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Profile (" + profile + ") not found in the Application </td></tr></table>", true);
+						Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Profile (" + profile
+								+ ") not found in the Application </td></tr></table>", true);
 					}
 				}
 
 			} catch (NoSuchElementException e) {
 				Reporter.log("", true);
-				Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Record Type (" + rcdType + ") not found in the Application </td></tr></table></br></br>", true);
+				Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Record Type (" + rcdType
+						+ ") not found in the Application </td></tr></table></br></br>", true);
 			}
 		}
 	}
