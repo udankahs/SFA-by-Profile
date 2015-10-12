@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Command line test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Oct 11 01:21:47 IST 2015</td>
+<td>Started on:</td><td>Mon Oct 12 18:10:28 IST 2015</td>
 </tr>
-<tr><td>Total time:</td><td>109 seconds (109926 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (10 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,53 +67,45 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.email.scripts.GetFieldsAcceble.getFields()'><b>getFields</b><br>Test class: com.email.scripts.GetFieldsAcceble<br/>
-<a href="#Output-2061543916" onClick='toggleBox("Output-2061543916", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2061543916" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2061543916">
-<table><tr><th><b>Login Status: </th><td>Login Succesfull</table><br/>
-<table><tr><th><b> Number of Objects taken for this Execution: </b></th><td>2</table></br></br><br/>
-<table><br/>
-<br/>
-<tr><th><b>OBJECT TESTING: </b></th><td>Account<td></table><br/>
-<br/>
-</br><table><tr><th>Record Type </th><td>Prescriber</td></table><br/>
-<table><tr><th>Fields</th><th>Source (Baseline Excel)  </th><th>Target (Application)  </th><th>Result</th><br/>
-<tr><th><b># Beds</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr><br/>
-<tr><th><b># Billing</b></th><td> Editable</td><td>Hidden</td><th> <font color='red'><b> FALSE </b></font><br/></th></tr><br/>
-<tr><th><b># Departments</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr><br/>
-<tr><th><b># Employees</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr><br/>
-<tr><th><b># Endometrial Procedures</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr><br/>
-<tr><th><b># Fellows</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr><br/>
-<tr><th><b># Hospitals Serviced</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr><br/>
-<tr><th><b># Infusion Chairs</b></th><td> Read-Only</td><td>Hidden</td><th> <font color='red'><b> FALSE </b></font><br/></th></tr><br/>
-<tr><th><b># NPs</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr><br/>
-<tr><th><b># Nurse Navigators</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr><br/>
-</table><br/>
-<br/>
-</br><table><tr><th><b>ERROR: </b></th><td> Profile (Invalid Account Profile) not found in the Application </td></table><br/>
-<br/>
-</br><table><tr><th><b>ERROR: </b></th><td> Record Type (Invalid Account Record Type) not found in the Application </td></table></br></br><br/>
-<br/>
-<tr><th><b>OBJECT TESTING: </b></th><td>Activity<td></table><br/>
-<br/>
-<br/>
-</br><table><tr><th><b>ERROR </b></th><td> Object (Activity) not found in the Application </td></table> <br/>
-</br><table><tr><th><b>ERROR </b></th><td> Baseline sheet for Activity not found</td></table><br/>
-</div>
-</td>
-<td></td>
-<td>99</td>
-<td>com.email.scripts.GetFieldsAcceble@14899482</td></tr>
+<td title='com.email.scripts.GetFieldsAcceble.getFields()'><b>getFields</b><br>Test class: com.email.scripts.GetFieldsAcceble</td>
+<td><div><pre>org.testng.TestNGException: 
+Method getFields requires 4 parameters but 0 were supplied in the @Test annotation.
+	at com.email.scripts.SFA_Main.main(SFA_Main.java:21)
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace23661220", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace23661220'><pre>org.testng.TestNGException: 
+Method getFields requires 4 parameters but 0 were supplied in the @Test annotation.
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:198)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:134)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:373)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:450)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at com.email.scripts.SFA_Main.main(SFA_Main.java:21)
+</pre></div></td>
+<td>0</td>
+<td>com.email.scripts.GetFieldsAcceble@1192d32</td></tr>
 </table><p>
 </body>
 </html>

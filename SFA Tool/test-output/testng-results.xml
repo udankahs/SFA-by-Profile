@@ -1,217 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
-    <line>
-      <![CDATA[<table><tr><th><b>Login Status: </th><td>Login Succesfull</table>]]>
-    </line>
-    <line>
-      <![CDATA[<table><tr><th><b> Number of Objects taken for this Execution: </b></th><td>2</table></br></br>]]>
-    </line>
-    <line>
-      <![CDATA[<table>]]>
-    </line>
-    <line>
-      <![CDATA[]]>
-    </line>
-    <line>
-      <![CDATA[<tr><th><b>OBJECT TESTING: </b></th><td>Account<td></table></br>]]>
-    </line>
-    <line>
-      <![CDATA[]]>
-    </line>
-    <line>
-      <![CDATA[<table><tr><th>Record Type: </th><td>Prescriber</td></tr></table>]]>
-    </line>
-    <line>
-      <![CDATA[<table><tr><th>Profile: </th><td>Abbott CAM Administrator</td></tr></table>]]>
-    </line>
-    <line>
-      <![CDATA[<style>table, th, td { border: 1px solid black;    border-collapse: collapse;}</style><table><tr bgcolor='#2EB8E6'><th>Fields</th><th>Source (Baseline Excel)  </th><th>Target (Application)  </th><th>Result</th></tr>]]>
-    </line>
-    <line>
-      <![CDATA[<tr><th bgcolor='gray'><b># Beds</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
-    </line>
-    <line>
-      <![CDATA[<tr><th bgcolor='gray'><b># Billing</b></th><td> Editable</td><td>Hidden</td><th> <font color='red'><b> FALSE </b></font><br/></th></tr>]]>
-    </line>
-    <line>
-      <![CDATA[<tr><th bgcolor='gray'><b># Departments</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
-    </line>
-    <line>
-      <![CDATA[<tr><th bgcolor='gray'><b># Employees</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
-    </line>
-    <line>
-      <![CDATA[<tr><th bgcolor='gray'><b># Endometrial Procedures</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
-    </line>
-    <line>
-      <![CDATA[<tr><th bgcolor='gray'><b># Fellows</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
-    </line>
-    <line>
-      <![CDATA[<tr><th bgcolor='gray'><b># Hospitals Serviced</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
-    </line>
-    <line>
-      <![CDATA[<tr><th bgcolor='gray'><b># Infusion Chairs</b></th><td> Read-Only</td><td>Hidden</td><th> <font color='red'><b> FALSE </b></font><br/></th></tr>]]>
-    </line>
-    <line>
-      <![CDATA[<tr><th bgcolor='gray'><b># NPs</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
-    </line>
-    <line>
-      <![CDATA[<tr><th bgcolor='gray'><b># Nurse Navigators</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
-    </line>
-    <line>
-      <![CDATA[</table></br>]]>
-    </line>
-    <line>
-      <![CDATA[<table><tr><th>Profile: </th><td>Invalid Account Profile</td></tr></table>]]>
-    </line>
-    <line>
-      <![CDATA[]]>
-    </line>
-    <line>
-      <![CDATA[<table><tr><th><font color='red'><b>ERROR: </b></th><td> Profile (Invalid Account Profile) not found in the Application </td></tr></table>]]>
-    </line>
-    <line>
-      <![CDATA[<table><tr><th>Record Type: </th><td>Invalid Account Record Type</td></tr></table>]]>
-    </line>
-    <line>
-      <![CDATA[]]>
-    </line>
-    <line>
-      <![CDATA[<table><tr>th><font color='red'><b>ERROR: </b></th><td> Record Type (Invalid Account Record Type) not found in the Application </td></tr></table></br></br>]]>
-    </line>
-    <line>
-      <![CDATA[]]>
-    </line>
-    <line>
-      <![CDATA[<tr><th><b>OBJECT TESTING: </b></th><td>Activity<td></table></br>]]>
-    </line>
-    <line>
-      <![CDATA[]]>
-    </line>
-    <line>
-      <![CDATA[]]>
-    </line>
-    <line>
-      <![CDATA[</br><table><tr><th><font color='red'><b>ERROR: </b></th><td> Object (Activity) not found in the Application </td></tr></table> ]]>
-    </line>
-    <line>
-      <![CDATA[<table><tr><th><b>ERROR: </b></th><td> Baseline sheet for Activity not found</td></table>]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="108285" started-at="2015-10-11T08:44:41Z" finished-at="2015-10-11T08:46:30Z">
+  <suite name="Command line suite" duration-ms="10" started-at="2015-10-12T12:40:28Z" finished-at="2015-10-12T12:40:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="108285" started-at="2015-10-11T08:44:41Z" finished-at="2015-10-11T08:46:30Z">
+    <test name="Command line test" duration-ms="10" started-at="2015-10-12T12:40:28Z" finished-at="2015-10-12T12:40:28Z">
       <class name="com.email.scripts.GetFieldsAcceble">
-        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.email.scripts.GetFieldsAcceble@3930015a]" name="preCondition" is-config="true" duration-ms="7262" started-at="2015-10-11T14:14:41Z" finished-at="2015-10-11T14:14:49Z">
+        <test-method status="FAIL" signature="getFields(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.email.scripts.GetFieldsAcceble@1192d32]" name="getFields" duration-ms="0" started-at="2015-10-12T18:10:28Z" finished-at="2015-10-12T18:10:28Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Method getFields requires 4 parameters but 0 were supplied in the @Test annotation.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Method getFields requires 4 parameters but 0 were supplied in the @Test annotation.
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:198)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:134)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:373)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:450)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at com.email.scripts.SFA_Main.main(SFA_Main.java:21)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
-          </reporter-output>
-        </test-method> <!-- preCondition -->
-        <test-method status="PASS" signature="getFields()[pri:0, instance:com.email.scripts.GetFieldsAcceble@3930015a]" name="getFields" duration-ms="96912" started-at="2015-10-11T14:14:49Z" finished-at="2015-10-11T14:16:26Z">
-          <reporter-output>
-            <line>
-              <![CDATA[<table><tr><th><b>Login Status: </th><td>Login Succesfull</table>]]>
-            </line>
-            <line>
-              <![CDATA[<table><tr><th><b> Number of Objects taken for this Execution: </b></th><td>2</table></br></br>]]>
-            </line>
-            <line>
-              <![CDATA[<table>]]>
-            </line>
-            <line>
-              <![CDATA[]]>
-            </line>
-            <line>
-              <![CDATA[<tr><th><b>OBJECT TESTING: </b></th><td>Account<td></table></br>]]>
-            </line>
-            <line>
-              <![CDATA[]]>
-            </line>
-            <line>
-              <![CDATA[<table><tr><th>Record Type: </th><td>Prescriber</td></tr></table>]]>
-            </line>
-            <line>
-              <![CDATA[<table><tr><th>Profile: </th><td>Abbott CAM Administrator</td></tr></table>]]>
-            </line>
-            <line>
-              <![CDATA[<style>table, th, td { border: 1px solid black;    border-collapse: collapse;}</style><table><tr bgcolor='#2EB8E6'><th>Fields</th><th>Source (Baseline Excel)  </th><th>Target (Application)  </th><th>Result</th></tr>]]>
-            </line>
-            <line>
-              <![CDATA[<tr><th bgcolor='gray'><b># Beds</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
-            </line>
-            <line>
-              <![CDATA[<tr><th bgcolor='gray'><b># Billing</b></th><td> Editable</td><td>Hidden</td><th> <font color='red'><b> FALSE </b></font><br/></th></tr>]]>
-            </line>
-            <line>
-              <![CDATA[<tr><th bgcolor='gray'><b># Departments</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
-            </line>
-            <line>
-              <![CDATA[<tr><th bgcolor='gray'><b># Employees</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
-            </line>
-            <line>
-              <![CDATA[<tr><th bgcolor='gray'><b># Endometrial Procedures</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
-            </line>
-            <line>
-              <![CDATA[<tr><th bgcolor='gray'><b># Fellows</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
-            </line>
-            <line>
-              <![CDATA[<tr><th bgcolor='gray'><b># Hospitals Serviced</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
-            </line>
-            <line>
-              <![CDATA[<tr><th bgcolor='gray'><b># Infusion Chairs</b></th><td> Read-Only</td><td>Hidden</td><th> <font color='red'><b> FALSE </b></font><br/></th></tr>]]>
-            </line>
-            <line>
-              <![CDATA[<tr><th bgcolor='gray'><b># NPs</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
-            </line>
-            <line>
-              <![CDATA[<tr><th bgcolor='gray'><b># Nurse Navigators</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
-            </line>
-            <line>
-              <![CDATA[</table></br>]]>
-            </line>
-            <line>
-              <![CDATA[<table><tr><th>Profile: </th><td>Invalid Account Profile</td></tr></table>]]>
-            </line>
-            <line>
-              <![CDATA[]]>
-            </line>
-            <line>
-              <![CDATA[<table><tr><th><font color='red'><b>ERROR: </b></th><td> Profile (Invalid Account Profile) not found in the Application </td></tr></table>]]>
-            </line>
-            <line>
-              <![CDATA[<table><tr><th>Record Type: </th><td>Invalid Account Record Type</td></tr></table>]]>
-            </line>
-            <line>
-              <![CDATA[]]>
-            </line>
-            <line>
-              <![CDATA[<table><tr>th><font color='red'><b>ERROR: </b></th><td> Record Type (Invalid Account Record Type) not found in the Application </td></tr></table></br></br>]]>
-            </line>
-            <line>
-              <![CDATA[]]>
-            </line>
-            <line>
-              <![CDATA[<tr><th><b>OBJECT TESTING: </b></th><td>Activity<td></table></br>]]>
-            </line>
-            <line>
-              <![CDATA[]]>
-            </line>
-            <line>
-              <![CDATA[]]>
-            </line>
-            <line>
-              <![CDATA[</br><table><tr><th><font color='red'><b>ERROR: </b></th><td> Object (Activity) not found in the Application </td></tr></table> ]]>
-            </line>
-            <line>
-              <![CDATA[<table><tr><th><b>ERROR: </b></th><td> Baseline sheet for Activity not found</td></table>]]>
-            </line>
           </reporter-output>
         </test-method> <!-- getFields -->
-        <test-method status="PASS" signature="postCondition()[pri:0, instance:com.email.scripts.GetFieldsAcceble@3930015a]" name="postCondition" is-config="true" duration-ms="4060" started-at="2015-10-11T14:16:26Z" finished-at="2015-10-11T14:16:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postCondition -->
       </class> <!-- com.email.scripts.GetFieldsAcceble -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
 </testng-results>

@@ -26,7 +26,7 @@ public class SFASuperTestNG
 		}
 		else if (browser.equals("Internet Explorer"))
 		{
-			System.setProperty("webdriver.ie.driver", "D:/SFA Selenium Utility/Browser Drivers/IEDriverServer_64.exe");
+			System.setProperty("webdriver.ie.driver", "D:/SFA Selenium Utility/Browser Drivers/IEDriverServer.exe");
 			driver=new InternetExplorerDriver();
 		}
 		

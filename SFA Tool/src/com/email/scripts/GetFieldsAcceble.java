@@ -9,15 +9,17 @@ import com.email.pom.gotoFieldAccebility;
 import com.lib.ExcelLib;
 
 public class GetFieldsAcceble extends SFASuperTestNG {
+	
+	String masterXlPath = "D:/SFA Selenium Utility/Data Sheet/Data Sheet.xls";
+	String accountXlPath = "D:/SFA Selenium Utility/Baseline Data/Baseline Excel_Account.xls";
+	String activityXlPath = "D:/SFA Selenium Utility/Baseline Data/Baseline Excel_Call.xls";
+	String sheetName = "Login";
 	@Test
 	public void getFields() throws Exception {
 		SFDCLogin loginPage = new SFDCLogin(driver);
 		gotoFieldAccebility fieldAccebility = new gotoFieldAccebility(driver);
 
-		String masterXlPath = "D:/SFA Selenium Utility/Data Sheet/Data Sheet.xls";
-		String accountXlPath = "D:/SFA Selenium Utility/Baseline Data/Baseline Excel_Account.xls";
-		String activityXlPath = "D:/SFA Selenium Utility/Baseline Data/Baseline Excel_Call.xls";
-		String sheetName = "Login";
+
 
 		String uname = ExcelLib.getCellValue(masterXlPath, sheetName, 1, 0);
 		String password = ExcelLib.getCellValue(masterXlPath, sheetName, 1, 1);
@@ -53,12 +55,12 @@ public class GetFieldsAcceble extends SFASuperTestNG {
 				if (fieldXlPath != null) {
 					fieldAccebility.getFieldAaccebilty(obj, masterXlPath, fieldXlPath);
 				} else {
-					Reporter.log("<table><tr><th><b>ERROR: </b></th><td> Baseline sheet for " + obj + " not found</td></table>", true);
+					Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Baseline sheet for " + obj + " not found</td></tr></table>", true);
 				}
 			}
 		} else {
 			{
-				Reporter.log("</br><table><tr><th><b>TEST STATUS</b></th><td> : Please Check Username and Password </td></table>", true);
+				Reporter.log("</br><table><tr><th><b>TEST STATUS</b></th><td> : Please Check Username and Password </td></tr></table>", true);
 			}
 		}
 	}

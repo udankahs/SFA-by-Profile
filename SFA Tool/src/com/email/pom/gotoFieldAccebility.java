@@ -209,7 +209,7 @@ public class gotoFieldAccebility {
 
 			} catch (NoSuchElementException e) {
 				Reporter.log("", true);
-				Reporter.log("<table><tr>th><font color='red'><b>ERROR: </b></th><td> Record Type (" + rcdType + ") not found in the Application </td></tr></table></br></br>", true);
+				Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Record Type (" + rcdType + ") not found in the Application </td></tr></table></br></br>", true);
 			}
 		}
 	}

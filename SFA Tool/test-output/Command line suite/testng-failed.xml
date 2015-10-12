@@ -5,9 +5,7 @@
     <classes>
       <class name="com.email.scripts.GetFieldsAcceble">
         <methods>
-          <include name="preCondition"/>
           <include name="getFields"/>
-          <include name="postCondition"/>
         </methods>
       </class> <!-- com.email.scripts.GetFieldsAcceble -->
     </classes>

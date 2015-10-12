@@ -48,12 +48,12 @@ public class SFDCLogin
 		
 		if (errorDisplayed)
 		{
-			Reporter.log("<table bgcolor='green'><tr><th><b>Login Status: </th><td>Login Failed</table>", true);
+			Reporter.log("<table><tr><th><b>Login Status: </th><td bgcolor='red'>Login Failed</td></tr></table>", true);
 			login= false;
 		}
 		else 
 		{
-			Reporter.log("<table><tr><th><b>Login Status: </th><td>Login Succesfull</table>", true);
+			Reporter.log("<table><tr><th><b>Login Status: </th ><td bgcolor='green'>Login Succesfull</td></tr></table>", true);
 			login= true;
 		}
 		return login;
