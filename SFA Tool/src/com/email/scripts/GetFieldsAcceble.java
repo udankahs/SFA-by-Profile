@@ -9,6 +9,12 @@ import com.email.pom.SFDCLogin;
 import com.email.pom.gotoFieldAccebility;
 import com.lib.ExcelLib;
 
+/* Owner 			: Udanka H S
+ * Email Id			: udanka.hs@cognizant.com
+ * Department 		: EAS CRM
+ * Organization		: Cognizant Technology Solutions
+ */
+
 public class GetFieldsAcceble extends SFASuperTestNG {
 
 	@Test
@@ -21,8 +27,8 @@ public class GetFieldsAcceble extends SFASuperTestNG {
 		String decodedPath = URLDecoder.decode(folderPath, "UTF-8");
 
 		String masterXlPath = decodedPath + "Data Sheet/Data Sheet.xls";
-		String accountXlPath = decodedPath + "Baseline Data/Baseline Excel_Account.xls";
-		String activityXlPath = decodedPath + "Baseline Data/Baseline Excel_Call.xls";
+//		String accountXlPath = decodedPath + "Baseline Data/Baseline Excel_Account.xls";
+//		String activityXlPath = decodedPath + "Baseline Data/Baseline Excel_Call.xls";
 		String sheetName = "Login";
 
 		String uname = ExcelLib.getCellValue(masterXlPath, sheetName, 1, 0);
@@ -43,31 +49,31 @@ public class GetFieldsAcceble extends SFASuperTestNG {
 				obj = ExcelLib.getCellValue(masterXlPath, sheetName, i, 2);
 
 				Reporter.log("", true);
-				Reporter.log("<tr><th><b>OBJECT TESTING: </b></th><td>" + obj + "<td></table></br>", true);
+				Reporter.log("</br><tr><th><b>OBJECT TESTING: </b></th><td>" + obj + "<td></table></br>", true);
 				Reporter.log("", true);
 
 				fieldAccebility.gotoFieldAaccebilty();
 				fieldAccebility.gotoObjAaccebilty(obj);
 
-				if (obj.equals("Account")) {
-					fieldXlPath = accountXlPath;
-				} else if (obj.equals("Call")) {
-					fieldXlPath = activityXlPath;
-				} else {
-					fieldXlPath = null;
-				}
+//				if (obj.equals("Account")) {
+//					fieldXlPath = decodedPath+"Baseline Data/Baseline Excel_"+obj+".xls";
+//				} else if (obj.equals("Call")) {
+//					fieldXlPath = activityXlPath;
+//				} else {
+//					fieldXlPath = null;
+//				}
+				
+				fieldXlPath = decodedPath+"Baseline Data/Baseline Excel_"+obj+".xls";
 				System.out.println("fieldXlPath " + fieldXlPath);
-				if (fieldXlPath != null) {
+				
 					fieldAccebility.getFieldAaccebilty(obj, masterXlPath, fieldXlPath);
-				} else {
-					Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Baseline sheet for " + obj
+					Reporter.log("<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Baseline sheet for " + obj
 							+ " not found</td></tr></table>", true);
-				}
 			}
 		} else {
 			{
 				Reporter.log(
-						"</br><table><tr><th><b>TEST STATUS</b></th><td> : Please Check Username and Password </td></tr></table>",
+						"</br><table><tr><th><b>TEST STATUS</b></th><td> : FAIED -- Please Check Username and Password </td></tr></table>",
 						true);
 			}
 		}

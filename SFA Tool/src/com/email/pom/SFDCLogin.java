@@ -9,6 +9,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
+/* Owner 			: Udanka H S
+ * Email Id			: udanka.hs@cognizant.com
+ * Department 		: EAS CRM
+ * Organization		: Cognizant Technology Solutions
+ */
+
 public class SFDCLogin {
 	private WebDriver driver;
 

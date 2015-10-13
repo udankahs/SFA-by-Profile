@@ -19,6 +19,12 @@ import org.testng.Reporter;
 
 import com.lib.ExcelLib;
 
+/* Owner 			: Udanka H S
+ * Email Id			: udanka.hs@cognizant.com
+ * Department 		: EAS CRM
+ * Organization		: Cognizant Technology Solutions
+ */
+
 public class gotoFieldAccebility {
 	private WebDriver driver;
 
@@ -108,7 +114,7 @@ public class gotoFieldAccebility {
 
 		else {
 			Reporter.log("", true);
-			Reporter.log("</br><table><tr><th><font color='red'><b>ERROR: </b></th><td> Object (" + Obj
+			Reporter.log("</br><table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Object (" + Obj
 					+ ") not found in the Application </td></tr></table> ", true);
 			reached = true;
 		}
@@ -202,7 +208,7 @@ public class gotoFieldAccebility {
 							} catch (NullPointerException e) {
 								Reporter.log("", true);
 								Reporter.log(
-										"<table><tr><th><font color='red'><b>ERROR: </b></th><td> Sheet (" + rcdType
+										"<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Sheet (" + rcdType
 												+ ") not found in the Data Sheet for the selected Object </td></tr></table>",
 										true);
 							}
@@ -211,14 +217,14 @@ public class gotoFieldAccebility {
 
 					else {
 						Reporter.log("", true);
-						Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Profile (" + profile
+						Reporter.log("<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Profile (" + profile
 								+ ") not found in the Application </td></tr></table>", true);
 					}
 				}
 
 			} catch (NoSuchElementException e) {
 				Reporter.log("", true);
-				Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Record Type (" + rcdType
+				Reporter.log("<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Record Type (" + rcdType
 						+ ") not found in the Application </td></tr></table></br></br>", true);
 			}
 		}
