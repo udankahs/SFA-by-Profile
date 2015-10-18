@@ -32,12 +32,12 @@ public class SFASuperTestNG {
 		if (browser.equals("Firefox")) {
 			driver = new FirefoxDriver();
 		} else if (browser.equals("Internet Explorer")) {
-			System.setProperty("webdriver.ie.driver", "D:/SFA Selenium Utility/Browser Drivers/IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver", decodedPath+"/Browser Drivers/IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 		}
 
 		else if (browser.equals("Chrome")) {
-			System.setProperty("webdriver.ie.driver", "D:/SFA Selenium Utility/Browser Drivers/chromedriver.exe");
+			System.setProperty("webdriver.ie.driver", decodedPath+"/Browser Drivers/chromedriver.exe");
 			driver = new InternetExplorerDriver();
 		}
 

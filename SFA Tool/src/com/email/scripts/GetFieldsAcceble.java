@@ -49,20 +49,12 @@ public class GetFieldsAcceble extends SFASuperTestNG {
 				obj = ExcelLib.getCellValue(masterXlPath, sheetName, i, 2);
 
 				Reporter.log("", true);
-				Reporter.log("</br><tr><th><b>OBJECT TESTING: </b></th><td>" + obj + "<td></table></br>", true);
+				Reporter.log("</br><style>table, th, td { border: 1px solid black;    border-collapse: collapse;}</style><table><tr><th><b>OBJECT TESTING: </b></th><td>" + obj + "<td></table></br>", true);
 				Reporter.log("", true);
 
 				fieldAccebility.gotoFieldAaccebilty();
 				fieldAccebility.gotoObjAaccebilty(obj);
 
-//				if (obj.equals("Account")) {
-//					fieldXlPath = decodedPath+"Baseline Data/Baseline Excel_"+obj+".xls";
-//				} else if (obj.equals("Call")) {
-//					fieldXlPath = activityXlPath;
-//				} else {
-//					fieldXlPath = null;
-//				}
-				
 				fieldXlPath = decodedPath+"Baseline Data/Baseline Excel_"+obj+".xls";
 				System.out.println("fieldXlPath " + fieldXlPath);
 				
@@ -73,7 +65,7 @@ public class GetFieldsAcceble extends SFASuperTestNG {
 		} else {
 			{
 				Reporter.log(
-						"</br><table><tr><th><b>TEST STATUS</b></th><td> : FAIED -- Please Check Username and Password </td></tr></table>",
+						"</br><table><tr><th><b>TEST STATUS</b></th><td> : FAILED -- Please Check Username and Password </td></tr></table>",
 						true);
 			}
 		}

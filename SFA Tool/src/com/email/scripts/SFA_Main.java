@@ -12,7 +12,8 @@ import org.testng.TestNG;
 
 import com.lib.ExcelLib;
 
-/* Owner 			: Udanka H S
+/* 
+ * Owner 			: Udanka H S
  * Email Id			: udanka.hs@cognizant.com
  * Department 		: EAS CRM
  * Organization		: Cognizant Technology Solutions
@@ -38,12 +39,12 @@ public class SFA_Main {
 		if (browser.equals("Firefox")) {
 			driver = new FirefoxDriver();
 		} else if (browser.equals("Internet Explorer")) {
-			System.setProperty("webdriver.ie.driver", "D:/SFA Selenium Utility/Browser Drivers/IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver", decodedPath+"Browser Drivers/IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 		}
 
 		else if (browser.equals("Chrome")) {
-			System.setProperty("webdriver.ie.driver", "D:/SFA Selenium Utility/Browser Drivers/chromedriver.exe");
+			System.setProperty("webdriver.ie.driver", decodedPath+"/Browser Drivers/chromedriver.exe");
 			driver = new InternetExplorerDriver();
 		}
 		driver.manage().window().maximize();

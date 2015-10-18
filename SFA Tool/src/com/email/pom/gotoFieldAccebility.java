@@ -184,7 +184,7 @@ public class gotoFieldAccebility {
 											Result = "PASS";
 											Color = "green";
 										} else {
-											Result = "FALSE";
+											Result = "FAIL";
 											Color = "red";
 										}
 
@@ -198,10 +198,6 @@ public class gotoFieldAccebility {
 														+ field + ") not found in the Application </td></tr></table>",
 												true);
 									}
-									// catch (Exception e) {
-									// // TODO Auto-generated catch block
-									// e.printStackTrace();
-									// }
 								}
 
 								Reporter.log("</table></br>");
