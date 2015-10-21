@@ -1,5 +1,6 @@
 package com.lib;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -72,5 +73,18 @@ public class ExcelLib
 		{
 			return -1;
 		}
+		
+	}
+	public static boolean isFileExists(String filePath, String fileName) {
+		boolean flag = false;
+	    File dir = new File(filePath);
+	    File[] dir_contents = dir.listFiles();
+	  	    
+	    for (int i = 0; i < dir_contents.length; i++) {
+	        if (dir_contents[i].getName().equals(fileName))
+	            return flag=true;
+	            }
+
+	    return flag;
 	}
 }
