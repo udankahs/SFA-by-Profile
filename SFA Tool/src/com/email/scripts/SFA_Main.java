@@ -5,6 +5,7 @@ import java.net.URLDecoder;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.TestListenerAdapter;
@@ -44,8 +45,8 @@ public class SFA_Main {
 		}
 
 		else if (browser.equals("Chrome")) {
-			System.setProperty("webdriver.ie.driver", decodedPath+"/Browser Drivers/chromedriver.exe");
-			driver = new InternetExplorerDriver();
+			System.setProperty("webdriver.chrome.driver", decodedPath+"/Browser Drivers/chromedriver.exe");
+			driver = new ChromeDriver();
 		}
 		driver.manage().window().maximize();
 		driver.get("file://" + decodedPath + "test-output/index.html");

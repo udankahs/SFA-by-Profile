@@ -46,10 +46,8 @@ public class GetFieldsAcceble extends SFASuperTestNG {
 			for (int i = 1; i <= objCount; i++) {
 				obj = ExcelLib.getCellValue(masterXlPath, sheetName, i, 2);
 
-				Reporter.log("<table><style>table, th, td { border: 1px solid black; border-collapse: collapse; background-color:lightgrey;}</style>", true);
-				Reporter.log(
-						"</br><tr><th><b>OBJECT TESTING: </b></th><td>"
-								+ obj + "<td></table></br>",
+				Reporter.log("</br><table><style>table, th, td { border: 1px solid black; border-collapse: collapse;}</style>", true);
+				Reporter.log("<tr><th><b>OBJECT TESTING: </b>"+ obj +"</th><td></br>",
 						true);
 				Reporter.log("", true);
 
@@ -70,11 +68,13 @@ public class GetFieldsAcceble extends SFASuperTestNG {
 									+ obj + " not found</td></tr></table>",
 							true);
 				}
+				Reporter.log("</td></table>", true);
 			}
+			
 		} else {
 			{
 				Reporter.log(
-						"</br><table><tr><th><b>TEST STATUS</b></th><td> : FAILED -- Please Check Username and Password </td></tr></table>",
+						"</br><table><tr><th><b>TEST STATUS :</b></th><td> FAILED -- Please Check Username and Password </td></tr></table>",
 						true);
 			}
 		}

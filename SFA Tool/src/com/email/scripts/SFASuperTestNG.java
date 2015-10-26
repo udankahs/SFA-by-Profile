@@ -5,6 +5,7 @@ import java.net.URLDecoder;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterMethod;
@@ -37,8 +38,8 @@ public class SFASuperTestNG {
 		}
 
 		else if (browser.equals("Chrome")) {
-			System.setProperty("webdriver.ie.driver", decodedPath+"/Browser Drivers/chromedriver.exe");
-			driver = new InternetExplorerDriver();
+			System.setProperty("webdriver.chrome.driver", decodedPath+"/Browser Drivers/chromedriver.exe");
+			driver = new ChromeDriver();
 		}
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
