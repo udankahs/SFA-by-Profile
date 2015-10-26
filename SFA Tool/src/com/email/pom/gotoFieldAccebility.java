@@ -78,8 +78,7 @@ public class gotoFieldAccebility {
 	int baselineProfileIndex = 0;
 	int noOfColumns = 0;
 	int passCount, failCount;
-	
-	
+
 	public gotoFieldAccebility(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
@@ -132,7 +131,7 @@ public class gotoFieldAccebility {
 		for (int i = 1; i <= recTypeCount; i++) {
 			Reporter.log("<tr>", true);
 			rcdType = ExcelLib.getCellValue(objxlPath, obj, i, 0);
-			Reporter.log("<table><tr><th><b>Record Type: </b>"+ rcdType +"</tr><tr><td>", true);
+			Reporter.log("<table><tr><th><b>Record Type: </b>" + rcdType + "</tr><tr><td>", true);
 			try {
 
 				new Select(RecordType).selectByVisibleText(rcdType);
@@ -145,7 +144,7 @@ public class gotoFieldAccebility {
 				for (int k = 1; k <= recTypeCount; k++) {
 
 					profile = ExcelLib.getCellValue(objxlPath, obj, k, 1);
-					Reporter.log("<table><tr><th><b>Profile: </b>" + profile + "</th></tr><td>", true);
+					Reporter.log("<table><tr><th><b>Profile: </b>" + profile + "</th></tr>", true);
 					for (int l = 0; l <= noOfColumns; l++) {
 						if (ExcelLib.getCellValue(fieldXlpath, rcdType, 0, l).equals(profile)) {
 							BaselineProfile = profile;
@@ -174,8 +173,9 @@ public class gotoFieldAccebility {
 								System.out.println("rowcount " + fieldCount);
 								Reporter.log(
 										"<style>table, th, td { border: 1px solid black;    border-collapse: collapse;}</style><table><tr bgcolor='#2EB8E6'><th>Fields</th><th>Source (Baseline Excel)  </th><th>Target (Application)  </th><th>Result</th></tr>");
-								
-								passCount = 0; failCount = 0;
+
+								passCount = 0;
+								failCount = 0;
 								for (int j = 1; j <= fieldCount; j++) {
 									field = ExcelLib.getCellValue(fieldXlpath, rcdType, j, 0);
 									try {
@@ -209,36 +209,38 @@ public class gotoFieldAccebility {
 								}
 
 								Reporter.log("</tr></table></br>");
-								
-								Reporter.log("<table><tr><th>Pass Count : "+ passCount+"</th><th>Fail Count : "+ failCount+"</th></tr></table></br>");
-								
-								//Reporter.log("</tr></table>", true);
+
+								Reporter.log("<table><tr><th>Pass Count : " + passCount + "</th><th>Fail Count : "
+										+ failCount + "</th></tr></table></br>");
+
+								Reporter.log("</td></tr></table>", true);
 							} catch (NullPointerException e) {
 								Reporter.log("", true);
 								Reporter.log(
-										"<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Sheet (" + rcdType
+										"<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Sheet ("
+												+ rcdType
 												+ ") not found in the Data Sheet for the selected Object </td></tr></table>",
 										true);
-								//Reporter.log("</tr></table>", true);
+								Reporter.log("</td></tr></table>", true);
 							}
 						}
 					}
 
 					else {
 						Reporter.log("", true);
-						Reporter.log("<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Profile (" + profile
-								+ ") not found in the Application </td></tr></table>", true);
+						Reporter.log("<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Profile ("
+								+ profile + ") not found in the Application </td></tr></table>", true);
 						//Reporter.log("</tr></table>", true);
-						
+
 					}
 				}
 
 			} catch (NoSuchElementException e) {
 				Reporter.log("", true);
-				Reporter.log("<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Record Type (" + rcdType
-						+ ") not found in the Application </td></tr></table></br>", true);
+				Reporter.log("<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Record Type ("
+						+ rcdType + ") not found in the Application </td></tr></table></br>", true);
 			}
-			Reporter.log("</td></tr>", true);
+			//Reporter.log("</tr>", true);
 		}
 		Reporter.log("</table>", true);
 	}

@@ -40,7 +40,7 @@ public class GetFieldsAcceble extends SFASuperTestNG {
 		if (loginPage.verifyLogin()) {
 			int objCount = ExcelLib.getRowCount(masterXlPath, sheetName);
 			Reporter.log("<table><tr><th><b> Number of Objects taken for this Execution: </b></th><td>" + objCount
-					+ "</table></br></br>", true);
+					+ "</td></table></br></br>", true);
 
 
 			for (int i = 1; i <= objCount; i++) {

@@ -5,7 +5,7 @@
       <![CDATA[<table><tr><th><b>Login Status: </th ><td bgcolor='green'>Login Succesfull</td></tr></table>]]>
     </line>
     <line>
-      <![CDATA[<table><tr><th><b> Number of Objects taken for this Execution: </b></th><td>3</table></br></br>]]>
+      <![CDATA[<table><tr><th><b> Number of Objects taken for this Execution: </b></th><td>3</td></table></br></br>]]>
     </line>
     <line>
       <![CDATA[</br><table><style>table, th, td { border: 1px solid black; border-collapse: collapse;}</style>]]>
@@ -23,73 +23,73 @@
       <![CDATA[<tr>]]>
     </line>
     <line>
-      <![CDATA[<table><tr><th><b>Record Type: </b>Business</tr><tr><td>]]>
+      <![CDATA[<table><tr><th><b>Record Type: </b>Prescriber</tr><tr><td>]]>
     </line>
     <line>
-      <![CDATA[<table><tr><th><b>Profile: </b>Abbott CAM Administrator</th></tr><td>]]>
+      <![CDATA[<table><tr><th><b>Profile: </b>Abbott CAM Administrator</th></tr>]]>
     </line>
     <line>
       <![CDATA[<style>table, th, td { border: 1px solid black;    border-collapse: collapse;}</style><table><tr bgcolor='#2EB8E6'><th>Fields</th><th>Source (Baseline Excel)  </th><th>Target (Application)  </th><th>Result</th></tr>]]>
     </line>
     <line>
-      <![CDATA[<tr><th bgcolor='gray'><b># Beds</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
+      <![CDATA[<tr><th bgcolor='gray'><b># Beds</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
     </line>
     <line>
-      <![CDATA[<tr><th bgcolor='gray'><b># Billing</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
+      <![CDATA[<tr><th bgcolor='gray'><b># Billing</b></th><td> Editable</td><td>Hidden</td><th> <font color='red'><b> FAIL </b></font><br/></th></tr>]]>
     </line>
     <line>
       <![CDATA[<tr><th bgcolor='gray'><b># Departments</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
     </line>
     <line>
-      <![CDATA[<tr><th bgcolor='gray'><b># Employees</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
+      <![CDATA[<tr><th bgcolor='gray'><b># Employees</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
     </line>
     <line>
-      <![CDATA[<tr><th bgcolor='gray'><b># Endometrial Procedures</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
+      <![CDATA[<tr><th bgcolor='gray'><b># Endometrial Procedures</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
     </line>
     <line>
-      <![CDATA[<tr><th bgcolor='gray'><b># Fellows</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
+      <![CDATA[<tr><th bgcolor='gray'><b># Fellows</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
     </line>
     <line>
-      <![CDATA[<tr><th bgcolor='gray'><b># Hospitals Serviced</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
+      <![CDATA[<tr><th bgcolor='gray'><b># Hospitals Serviced</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
     </line>
     <line>
-      <![CDATA[<tr><th bgcolor='gray'><b># Infusion Chairs</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
+      <![CDATA[<tr><th bgcolor='gray'><b># Infusion Chairs</b></th><td> Read-Only</td><td>Hidden</td><th> <font color='red'><b> FAIL </b></font><br/></th></tr>]]>
     </line>
     <line>
-      <![CDATA[<tr><th bgcolor='gray'><b># NPs</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
+      <![CDATA[<tr><th bgcolor='gray'><b># NPs</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
+    </line>
+    <line>
+      <![CDATA[<tr><th bgcolor='gray'><b># Nurse Navigators</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
     </line>
     <line>
       <![CDATA[</tr></table></br>]]>
     </line>
     <line>
-      <![CDATA[<table><tr><th>Pass Count : 9</th><th>Fail Count : 0</th></tr></table></br>]]>
+      <![CDATA[<table><tr><th>Pass Count : 8</th><th>Fail Count : 2</th></tr></table></br>]]>
     </line>
     <line>
-      <![CDATA[<table><tr><th><b>Profile: </b>Invalid Profile</th></tr><td>]]>
+      <![CDATA[</td></tr></table>]]>
+    </line>
+    <line>
+      <![CDATA[<table><tr><th><b>Profile: </b>Invalid Account Profile</th></tr>]]>
     </line>
     <line>
       <![CDATA[]]>
     </line>
     <line>
-      <![CDATA[<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Profile (Invalid Profile) not found in the Application </td></tr></table>]]>
-    </line>
-    <line>
-      <![CDATA[</td></tr>]]>
+      <![CDATA[<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Profile (Invalid Account Profile) not found in the Application </td></tr></table>]]>
     </line>
     <line>
       <![CDATA[<tr>]]>
     </line>
     <line>
-      <![CDATA[<table><tr><th><b>Record Type: </b>Invalid Record Type</tr><tr><td>]]>
+      <![CDATA[<table><tr><th><b>Record Type: </b>Invalid Account Record Type</tr><tr><td>]]>
     </line>
     <line>
       <![CDATA[]]>
     </line>
     <line>
-      <![CDATA[<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Record Type (Invalid Record Type) not found in the Application </td></tr></table></br>]]>
-    </line>
-    <line>
-      <![CDATA[</td></tr>]]>
+      <![CDATA[<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Record Type (Invalid Account Record Type) not found in the Application </td></tr></table></br>]]>
     </line>
     <line>
       <![CDATA[</table>]]>
@@ -137,7 +137,7 @@
       <![CDATA[<table><tr><th><b>Record Type: </b>HCP Detail Call</tr><tr><td>]]>
     </line>
     <line>
-      <![CDATA[<table><tr><th><b>Profile: </b>Abbott CAM Administrator</th></tr><td>]]>
+      <![CDATA[<table><tr><th><b>Profile: </b>Abbott CAM Administrator</th></tr>]]>
     </line>
     <line>
       <![CDATA[<style>table, th, td { border: 1px solid black;    border-collapse: collapse;}</style><table><tr bgcolor='#2EB8E6'><th>Fields</th><th>Source (Baseline Excel)  </th><th>Target (Application)  </th><th>Result</th></tr>]]>
@@ -179,16 +179,16 @@
       <![CDATA[<table><tr><th>Pass Count : 10</th><th>Fail Count : 0</th></tr></table></br>]]>
     </line>
     <line>
-      <![CDATA[<table><tr><th><b>Profile: </b>Invalid Profile</th></tr><td>]]>
+      <![CDATA[</td></tr></table>]]>
+    </line>
+    <line>
+      <![CDATA[<table><tr><th><b>Profile: </b>Invalid Call Profile</th></tr>]]>
     </line>
     <line>
       <![CDATA[]]>
     </line>
     <line>
-      <![CDATA[<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Profile (Invalid Profile) not found in the Application </td></tr></table>]]>
-    </line>
-    <line>
-      <![CDATA[</td></tr>]]>
+      <![CDATA[<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Profile (Invalid Call Profile) not found in the Application </td></tr></table>]]>
     </line>
     <line>
       <![CDATA[<tr>]]>
@@ -203,31 +203,28 @@
       <![CDATA[<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Record Type (random Call) not found in the Application </td></tr></table></br>]]>
     </line>
     <line>
-      <![CDATA[</td></tr>]]>
-    </line>
-    <line>
       <![CDATA[</table>]]>
     </line>
     <line>
       <![CDATA[</td></table>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="182297" started-at="2015-10-26T12:34:07Z" finished-at="2015-10-26T12:37:10Z">
+  <suite name="Default suite" duration-ms="176251" started-at="2015-10-26T17:03:57Z" finished-at="2015-10-26T17:06:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="182297" started-at="2015-10-26T12:34:07Z" finished-at="2015-10-26T12:37:10Z">
+    <test name="Default test" duration-ms="176251" started-at="2015-10-26T17:03:57Z" finished-at="2015-10-26T17:06:53Z">
       <class name="com.email.scripts.GetFieldsAcceble">
-        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.email.scripts.GetFieldsAcceble@1c6a36e]" name="preCondition" is-config="true" duration-ms="8803" started-at="2015-10-26T18:04:07Z" finished-at="2015-10-26T18:04:16Z">
+        <test-method status="PASS" signature="preCondition()[pri:0, instance:com.email.scripts.GetFieldsAcceble@3930015a]" name="preCondition" is-config="true" duration-ms="7997" started-at="2015-10-26T22:33:57Z" finished-at="2015-10-26T22:34:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method status="PASS" signature="getFields()[pri:0, instance:com.email.scripts.GetFieldsAcceble@1c6a36e]" name="getFields" duration-ms="170320" started-at="2015-10-26T18:04:16Z" finished-at="2015-10-26T18:07:06Z">
+        <test-method status="PASS" signature="getFields()[pri:0, instance:com.email.scripts.GetFieldsAcceble@3930015a]" name="getFields" duration-ms="163978" started-at="2015-10-26T22:34:05Z" finished-at="2015-10-26T22:36:49Z">
           <reporter-output>
             <line>
               <![CDATA[<table><tr><th><b>Login Status: </th ><td bgcolor='green'>Login Succesfull</td></tr></table>]]>
             </line>
             <line>
-              <![CDATA[<table><tr><th><b> Number of Objects taken for this Execution: </b></th><td>3</table></br></br>]]>
+              <![CDATA[<table><tr><th><b> Number of Objects taken for this Execution: </b></th><td>3</td></table></br></br>]]>
             </line>
             <line>
               <![CDATA[</br><table><style>table, th, td { border: 1px solid black; border-collapse: collapse;}</style>]]>
@@ -245,73 +242,73 @@
               <![CDATA[<tr>]]>
             </line>
             <line>
-              <![CDATA[<table><tr><th><b>Record Type: </b>Business</tr><tr><td>]]>
+              <![CDATA[<table><tr><th><b>Record Type: </b>Prescriber</tr><tr><td>]]>
             </line>
             <line>
-              <![CDATA[<table><tr><th><b>Profile: </b>Abbott CAM Administrator</th></tr><td>]]>
+              <![CDATA[<table><tr><th><b>Profile: </b>Abbott CAM Administrator</th></tr>]]>
             </line>
             <line>
               <![CDATA[<style>table, th, td { border: 1px solid black;    border-collapse: collapse;}</style><table><tr bgcolor='#2EB8E6'><th>Fields</th><th>Source (Baseline Excel)  </th><th>Target (Application)  </th><th>Result</th></tr>]]>
             </line>
             <line>
-              <![CDATA[<tr><th bgcolor='gray'><b># Beds</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
+              <![CDATA[<tr><th bgcolor='gray'><b># Beds</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
             </line>
             <line>
-              <![CDATA[<tr><th bgcolor='gray'><b># Billing</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
+              <![CDATA[<tr><th bgcolor='gray'><b># Billing</b></th><td> Editable</td><td>Hidden</td><th> <font color='red'><b> FAIL </b></font><br/></th></tr>]]>
             </line>
             <line>
               <![CDATA[<tr><th bgcolor='gray'><b># Departments</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
             </line>
             <line>
-              <![CDATA[<tr><th bgcolor='gray'><b># Employees</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
+              <![CDATA[<tr><th bgcolor='gray'><b># Employees</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
             </line>
             <line>
-              <![CDATA[<tr><th bgcolor='gray'><b># Endometrial Procedures</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
+              <![CDATA[<tr><th bgcolor='gray'><b># Endometrial Procedures</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
             </line>
             <line>
-              <![CDATA[<tr><th bgcolor='gray'><b># Fellows</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
+              <![CDATA[<tr><th bgcolor='gray'><b># Fellows</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
             </line>
             <line>
-              <![CDATA[<tr><th bgcolor='gray'><b># Hospitals Serviced</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
+              <![CDATA[<tr><th bgcolor='gray'><b># Hospitals Serviced</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
             </line>
             <line>
-              <![CDATA[<tr><th bgcolor='gray'><b># Infusion Chairs</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
+              <![CDATA[<tr><th bgcolor='gray'><b># Infusion Chairs</b></th><td> Read-Only</td><td>Hidden</td><th> <font color='red'><b> FAIL </b></font><br/></th></tr>]]>
             </line>
             <line>
-              <![CDATA[<tr><th bgcolor='gray'><b># NPs</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
+              <![CDATA[<tr><th bgcolor='gray'><b># NPs</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
+            </line>
+            <line>
+              <![CDATA[<tr><th bgcolor='gray'><b># Nurse Navigators</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr>]]>
             </line>
             <line>
               <![CDATA[</tr></table></br>]]>
             </line>
             <line>
-              <![CDATA[<table><tr><th>Pass Count : 9</th><th>Fail Count : 0</th></tr></table></br>]]>
+              <![CDATA[<table><tr><th>Pass Count : 8</th><th>Fail Count : 2</th></tr></table></br>]]>
             </line>
             <line>
-              <![CDATA[<table><tr><th><b>Profile: </b>Invalid Profile</th></tr><td>]]>
+              <![CDATA[</td></tr></table>]]>
+            </line>
+            <line>
+              <![CDATA[<table><tr><th><b>Profile: </b>Invalid Account Profile</th></tr>]]>
             </line>
             <line>
               <![CDATA[]]>
             </line>
             <line>
-              <![CDATA[<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Profile (Invalid Profile) not found in the Application </td></tr></table>]]>
-            </line>
-            <line>
-              <![CDATA[</td></tr>]]>
+              <![CDATA[<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Profile (Invalid Account Profile) not found in the Application </td></tr></table>]]>
             </line>
             <line>
               <![CDATA[<tr>]]>
             </line>
             <line>
-              <![CDATA[<table><tr><th><b>Record Type: </b>Invalid Record Type</tr><tr><td>]]>
+              <![CDATA[<table><tr><th><b>Record Type: </b>Invalid Account Record Type</tr><tr><td>]]>
             </line>
             <line>
               <![CDATA[]]>
             </line>
             <line>
-              <![CDATA[<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Record Type (Invalid Record Type) not found in the Application </td></tr></table></br>]]>
-            </line>
-            <line>
-              <![CDATA[</td></tr>]]>
+              <![CDATA[<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Record Type (Invalid Account Record Type) not found in the Application </td></tr></table></br>]]>
             </line>
             <line>
               <![CDATA[</table>]]>
@@ -359,7 +356,7 @@
               <![CDATA[<table><tr><th><b>Record Type: </b>HCP Detail Call</tr><tr><td>]]>
             </line>
             <line>
-              <![CDATA[<table><tr><th><b>Profile: </b>Abbott CAM Administrator</th></tr><td>]]>
+              <![CDATA[<table><tr><th><b>Profile: </b>Abbott CAM Administrator</th></tr>]]>
             </line>
             <line>
               <![CDATA[<style>table, th, td { border: 1px solid black;    border-collapse: collapse;}</style><table><tr bgcolor='#2EB8E6'><th>Fields</th><th>Source (Baseline Excel)  </th><th>Target (Application)  </th><th>Result</th></tr>]]>
@@ -401,16 +398,16 @@
               <![CDATA[<table><tr><th>Pass Count : 10</th><th>Fail Count : 0</th></tr></table></br>]]>
             </line>
             <line>
-              <![CDATA[<table><tr><th><b>Profile: </b>Invalid Profile</th></tr><td>]]>
+              <![CDATA[</td></tr></table>]]>
+            </line>
+            <line>
+              <![CDATA[<table><tr><th><b>Profile: </b>Invalid Call Profile</th></tr>]]>
             </line>
             <line>
               <![CDATA[]]>
             </line>
             <line>
-              <![CDATA[<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Profile (Invalid Profile) not found in the Application </td></tr></table>]]>
-            </line>
-            <line>
-              <![CDATA[</td></tr>]]>
+              <![CDATA[<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Profile (Invalid Call Profile) not found in the Application </td></tr></table>]]>
             </line>
             <line>
               <![CDATA[<tr>]]>
@@ -425,9 +422,6 @@
               <![CDATA[<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Record Type (random Call) not found in the Application </td></tr></table></br>]]>
             </line>
             <line>
-              <![CDATA[</td></tr>]]>
-            </line>
-            <line>
               <![CDATA[</table>]]>
             </line>
             <line>
@@ -435,7 +429,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- getFields -->
-        <test-method status="PASS" signature="postCondition()[pri:0, instance:com.email.scripts.GetFieldsAcceble@1c6a36e]" name="postCondition" is-config="true" duration-ms="3114" started-at="2015-10-26T18:07:06Z" finished-at="2015-10-26T18:07:10Z">
+        <test-method status="PASS" signature="postCondition()[pri:0, instance:com.email.scripts.GetFieldsAcceble@3930015a]" name="postCondition" is-config="true" duration-ms="4215" started-at="2015-10-26T22:36:49Z" finished-at="2015-10-26T22:36:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCondition -->
