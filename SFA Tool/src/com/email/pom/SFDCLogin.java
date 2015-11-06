@@ -52,7 +52,7 @@ public class SFDCLogin {
 			Reporter.log("<table><style>table, th, td { border: 1px solid black; border-collapse: collapse;}</style><tr><th><b>Login Status: </th><td bgcolor='red'>Login Failed</td></tr></table>", true);
 			login = false;
 		} else {
-			Reporter.log("<table><tr><th><b>Login Status: </th ><td bgcolor='green'>Login Succesfull</td></tr></table>",
+			Reporter.log("<table><tr><th><b>Login Status: </th ><td bgcolor='green'>Login Successfull</td></tr></table>",
 					true);
 			login = true;
 		}

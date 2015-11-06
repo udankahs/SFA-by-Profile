@@ -114,8 +114,7 @@ public class gotoFieldAccebility {
 		}
 
 		else {
-			Reporter.log("", true);
-			Reporter.log("<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Object (" + Obj
+			Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Object (" + Obj
 					+ ") not found in the Application </td></tr></table> ", true);
 			reached = true;
 		}
@@ -125,13 +124,12 @@ public class gotoFieldAccebility {
 	public void getFieldAaccebilty(String obj, String objxlPath, String fieldXlpath)
 			throws InterruptedException, InvalidFormatException, FileNotFoundException, IOException {
 
-		int recTypeCount = ExcelLib.getRowCount(objxlPath, obj);
-		System.out.println("recTypeCount :" + recTypeCount);
+		int recTypeCount = ExcelLib.getRowCountofColumn(objxlPath, obj, 0);
 		Reporter.log("<table>", true);
-		for (int i = 1; i <= recTypeCount; i++) {
-			Reporter.log("<tr>", true);
+		for (int i = 1; i < recTypeCount; i++) {
+			Reporter.log("<tr><td>", true);
 			rcdType = ExcelLib.getCellValue(objxlPath, obj, i, 0);
-			Reporter.log("<table><tr><th><b>Record Type: </b>" + rcdType + "</tr><tr><td>", true);
+			Reporter.log("<table><tr><th>Record Type: " + rcdType + "</th></tr><tr><td>", true);
 			try {
 
 				new Select(RecordType).selectByVisibleText(rcdType);
@@ -139,44 +137,38 @@ public class gotoFieldAccebility {
 
 				noOfColumns = WorkbookFactory.create(new FileInputStream(fieldXlpath)).getSheet(rcdType).getRow(0)
 						.getPhysicalNumberOfCells();
-				System.out.println("noOfColumns :" + noOfColumns);
-
-				for (int k = 1; k <= recTypeCount; k++) {
+				int profileCount = ExcelLib.getRowCountofColumn(objxlPath, obj, 1);
+				for (int k = 1; k < profileCount; k++) {
 
 					profile = ExcelLib.getCellValue(objxlPath, obj, k, 1);
-					Reporter.log("<table><tr><th><b>Profile: </b>" + profile + "</th></tr>", true);
-					for (int l = 0; l <= noOfColumns; l++) {
+					Reporter.log("<table><tr><th><b>Profile: " + profile + "</b></th></tr>", true);
+					for (int l = 1; l < noOfColumns; l++) {
 						if (ExcelLib.getCellValue(fieldXlpath, rcdType, 0, l).equals(profile)) {
 							BaselineProfile = profile;
 							baselineProfileIndex = l;
 							break;
+						} else {
 						}
-					}
 
-					System.out.println("BaselineProfile :" + BaselineProfile);
-					System.out.println("baselineProfileIndex :" + baselineProfileIndex);
+					}
 
 					List<WebElement> allProfile = driver.findElements(By.xpath("//table/tbody/tr[5]/th"));
 					if (driver.findElements(By.xpath("//table/tbody/tr[5]/th[text()='" + profile + "']")).size() > 0) {
 						WebElement option = driver
 								.findElement(By.xpath("//table/tbody/tr[5]/th[text()='" + profile + "']"));
 
-						System.out.println("option " + option);
-
 						if (allProfile.contains(option)) {
 							int profileIndex = allProfile.indexOf(option);
-							System.out.println("ProfileIndex " + profileIndex);
 
 							try {
 								int fieldCount = ExcelLib.getRowCount(fieldXlpath, rcdType);
 
-								System.out.println("rowcount " + fieldCount);
 								Reporter.log(
-										"<style>table, th, td { border: 1px solid black;    border-collapse: collapse;}</style><table><tr bgcolor='#2EB8E6'><th>Fields</th><th>Source (Baseline Excel)  </th><th>Target (Application)  </th><th>Result</th></tr>");
+										"<table><tr bgcolor='#2EB8E6'><th>Fields</th><th>Source (Baseline Excel)  </th><th>Target (Application)  </th><th>Result</th></tr>");
 
 								passCount = 0;
 								failCount = 0;
-								for (int j = 1; j <= fieldCount; j++) {
+								for (int j = 1; j < fieldCount; j++) {
 									field = ExcelLib.getCellValue(fieldXlpath, rcdType, j, 0);
 									try {
 										targetState = driver
@@ -213,7 +205,6 @@ public class gotoFieldAccebility {
 								Reporter.log("<table><tr><th>Pass Count : " + passCount + "</th><th>Fail Count : "
 										+ failCount + "</th></tr></table></br>");
 
-								Reporter.log("</td></tr></table>", true);
 							} catch (NullPointerException e) {
 								Reporter.log("", true);
 								Reporter.log(
@@ -228,19 +219,19 @@ public class gotoFieldAccebility {
 
 					else {
 						Reporter.log("", true);
-						Reporter.log("<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Profile ("
+						Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Profile ("
 								+ profile + ") not found in the Application </td></tr></table>", true);
-						//Reporter.log("</tr></table>", true);
+						Reporter.log("</td></tr></table>", true);
 
 					}
 				}
 
 			} catch (NoSuchElementException e) {
 				Reporter.log("", true);
-				Reporter.log("<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Record Type ("
+				Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Record Type ("
 						+ rcdType + ") not found in the Application </td></tr></table></br>", true);
+				Reporter.log("</td></tr></table>", true);
 			}
-			//Reporter.log("</tr>", true);
 		}
 		Reporter.log("</table>", true);
 	}
