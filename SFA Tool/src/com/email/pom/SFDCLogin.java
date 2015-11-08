@@ -11,7 +11,7 @@ import org.testng.Reporter;
 
 /* Owner 			: Udanka H S
  * Email Id			: udanka.hs@cognizant.com
- * Department 		: EAS CRM
+ * Department 		: QEA CRM
  * Organization		: Cognizant Technology Solutions
  */
 
@@ -43,19 +43,18 @@ public class SFDCLogin {
 	}
 
 	public boolean verifyLogin() {
-		boolean login = false;
+		boolean loginSuccess;
 		driver.manage().timeouts().implicitlyWait(0, TimeUnit.MILLISECONDS);
 		boolean errorDisplayed = driver.findElements(By.xpath("//div[@id='error']")).size() > 0;
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		if (errorDisplayed) {
-			Reporter.log("<table><style>table, th, td { border: 1px solid black; border-collapse: collapse;}</style><tr><th><b>Login Status: </th><td bgcolor='red'>Login Failed</td></tr></table>", true);
-			login = false;
+			Reporter.log("<table><tr><th><b>Login Status: </th><td bgcolor='#FF0000'><b>Login Failed</b></td></tr></table>", true);
+			loginSuccess = false;
 		} else {
-			Reporter.log("<table><tr><th><b>Login Status: </th ><td bgcolor='green'>Login Successfull</td></tr></table>",
-					true);
-			login = true;
+			Reporter.log("<table><tr><th><b>Login Status: </th ><td bgcolor='#00FF00'><b>Login Successfull</b></td></tr></table>",true);
+			loginSuccess = true;
 		}
-		return login;
+		return loginSuccess;
 	}
 }

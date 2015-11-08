@@ -16,7 +16,7 @@ import com.lib.ExcelLib;
 /* 
  * Owner 			: Udanka H S
  * Email Id			: udanka.hs@cognizant.com
- * Department 		: EAS CRM
+ * Department 		: QEA CRM
  * Organization		: Cognizant Technology Solutions
  */
 
@@ -32,24 +32,24 @@ public class SFA_Main {
 		testng.run();
 
 		String JarPath = GetFieldsAcceble.class.getProtectionDomain().getCodeSource().getLocation().getPath();
-		String folderPath = JarPath.substring(0, JarPath.lastIndexOf("/") + 1);
-		String decodedPath = URLDecoder.decode(folderPath, "UTF-8");
+		String unformattedFolderPath = JarPath.substring(0, JarPath.lastIndexOf("/") + 1);
+		String folderPath = URLDecoder.decode(unformattedFolderPath, "UTF-8");
 
-		String browser = ExcelLib.getCellValue(decodedPath + "/Data Sheet/Data Sheet.xls", "Login", 1, 3);
+		String browser = ExcelLib.getCellValue(folderPath + "/Data Sheet/Data Sheet.xls", "Login", 1, 3);
 
 		if (browser.equals("Firefox")) {
 			driver = new FirefoxDriver();
 		} else if (browser.equals("Internet Explorer")) {
-			System.setProperty("webdriver.ie.driver", decodedPath+"Browser Drivers/IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver", folderPath+"Browser Drivers/IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 		}
 
 		else if (browser.equals("Chrome")) {
-			System.setProperty("webdriver.chrome.driver", decodedPath+"/Browser Drivers/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", folderPath+"/Browser Drivers/chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 		driver.manage().window().maximize();
-		driver.get("file://" + decodedPath + "test-output/index.html");
+		driver.get("file://" + folderPath + "test-output/index.html");
 		driver.findElement(By.xpath("//span[text()='Reporter output']")).click();
 	}
 }

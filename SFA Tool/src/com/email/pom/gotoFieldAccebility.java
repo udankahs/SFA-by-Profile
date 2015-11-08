@@ -21,7 +21,7 @@ import com.lib.ExcelLib;
 
 /* Owner 			: Udanka H S
  * Email Id			: udanka.hs@cognizant.com
- * Department 		: EAS CRM
+ * Department 		: QEA CRM
  * Organization		: Cognizant Technology Solutions
  */
 
@@ -48,24 +48,6 @@ public class gotoFieldAccebility {
 
 	@FindBy(id = "zSelect")
 	private WebElement RecordType;
-
-	@FindBy(xpath = "//*[@id='topButtonRow']/input[@type=('button') and @name='edit']")
-	private WebElement Edit;
-
-	@FindBy(id = "Email")
-	private WebElement Email;
-
-	@FindBy(id = "new_password")
-	private WebElement PasswordResetCheckbox;
-
-	@FindBy(id = "userNavLabel")
-	private WebElement Menu;
-
-	@FindBy(xpath = "//a[contains(text(), 'Logout')]")
-	private WebElement Logout;
-
-	@FindBy(xpath = "//*[@id='topButtonRow']/input[@type=('submit') and @title=('Save')]")
-	private WebElement Save;
 
 	String profile = null;
 	String rcdType = null;
@@ -101,7 +83,7 @@ public class gotoFieldAccebility {
 	}
 
 	public boolean gotoObjAaccebilty(String Obj) throws InterruptedException {
-		boolean reached;
+		boolean validObject;
 		driver.manage().timeouts().implicitlyWait(0, TimeUnit.MILLISECONDS);
 		boolean objExists = driver.findElements(By.xpath("//*[@id='bodyCell']/ul//a[text()='" + Obj + "']")).size() > 0;
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -110,15 +92,13 @@ public class gotoFieldAccebility {
 			driver.findElement(By.xpath("//*[@id='bodyCell']/ul//a[text()='" + Obj + "']")).click();
 			ViewByRecordTypes.click();
 			Thread.sleep(5000);
-			reached = true;
+			validObject = true;
 		}
 
 		else {
-			Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Object (" + Obj
-					+ ") not found in the Application </td></tr></table> ", true);
-			reached = true;
+			validObject = false;
 		}
-		return reached;
+		return validObject;
 	}
 
 	public void getFieldAaccebilty(String obj, String objxlPath, String fieldXlpath)
@@ -129,7 +109,7 @@ public class gotoFieldAccebility {
 		for (int i = 1; i < recTypeCount; i++) {
 			Reporter.log("<tr><td>", true);
 			rcdType = ExcelLib.getCellValue(objxlPath, obj, i, 0);
-			Reporter.log("<table><tr><th>Record Type: " + rcdType + "</th></tr><tr><td>", true);
+			Reporter.log("<table><tr><th>RECORD TYPE: " + rcdType + "</th></tr><tr><td>", true);
 			try {
 
 				new Select(RecordType).selectByVisibleText(rcdType);
@@ -141,7 +121,7 @@ public class gotoFieldAccebility {
 				for (int k = 1; k < profileCount; k++) {
 
 					profile = ExcelLib.getCellValue(objxlPath, obj, k, 1);
-					Reporter.log("<table><tr><th><b>Profile: " + profile + "</b></th></tr>", true);
+					Reporter.log("<table><tr><th><b>PROFILE: " + profile + "</b></th></tr>", true);
 					for (int l = 1; l < noOfColumns; l++) {
 						if (ExcelLib.getCellValue(fieldXlpath, rcdType, 0, l).equals(profile)) {
 							BaselineProfile = profile;

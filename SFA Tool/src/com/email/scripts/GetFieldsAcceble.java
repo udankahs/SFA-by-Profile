@@ -12,7 +12,7 @@ import com.lib.ExcelLib;
 /* 
  * Owner 			: Udanka H S
  * Email Id			: udanka.hs@cognizant.com
- * Department 		: EAS CRM
+ * Department 		: QEA CRM
  * Organization		: Cognizant Technology Solutions
  */
 
@@ -43,42 +43,45 @@ public class GetFieldsAcceble extends SFASuperTestNG {
 		if (loginPage.verifyLogin()) {
 			int objCount = ExcelLib.getRowCountofColumn(masterXlPath, sheetName, 2);
 
-			Reporter.log("<table><tr><th><b> Number of Objects taken for this Execution: </b></th><td> " + --objCount
-					+ " </td></tr></table></br></br>", true);
+			Reporter.log("<table><tr><th><b> Number of Objects taken for this Execution: </b></th><td>  " + --objCount
+					+ "  </td></tr></table></br>", true);
 
-			for (int i = 1; i <objCount; i++) {
+			for (int i = 1; i <=objCount; i++) {
 				obj = ExcelLib.getCellValue(masterXlPath, sheetName, i, 2);
 
 				Reporter.log("</br><table>", true);
-				Reporter.log("<tr><th><b>OBJECT TESTING: </b>" + obj + "</th><td>", true);
+				Reporter.log("<tr><th bgcolor='#4B0082'><b>OBJECT TESTING: </b>" + obj + "</th><td>", true);
 
 				fieldAccebility.gotoFieldAaccebilty();
-				fieldAccebility.gotoObjAaccebilty(obj);
+				if (fieldAccebility.gotoObjAaccebilty(obj)) {
 
-				fieldXlPath = decodedPath + "Baseline Data/Baseline Excel_" + obj + ".xls";
-//				System.out.println("fieldXlPath " + fieldXlPath);
+					fieldXlPath = decodedPath + "Baseline Data/Baseline Excel_" + obj + ".xls";
 
-//				System.out.println(ExcelLib.isFileExists(decodedPath, "Baseline Excel_" + obj + ".xls"));
+					if (ExcelLib.isFileExists(decodedPath + "/Baseline Data/", "Baseline Excel_" + obj + ".xls")) {
+						fieldAccebility.getFieldAaccebilty(obj, masterXlPath, fieldXlPath);
 
-				if (ExcelLib.isFileExists(decodedPath + "/Baseline Data/", "Baseline Excel_" + obj + ".xls")) {
-					fieldAccebility.getFieldAaccebilty(obj, masterXlPath, fieldXlPath);
+					} else {
 
-				} else {
+						Reporter.log(
+								"<table><tr><th><font color='red'><b>ERROR: </b></th><td> Baseline sheet for "
+										+ obj + " not found</td></tr></table>",
+								true);
+					}
+					Reporter.log("</td></table>", true);
 
-					Reporter.log(
-							"<table><tr><th>	</th><th><font color='red'><b>ERROR: </b></th><td> Baseline sheet for "
-									+ obj + " not found</td></tr></table>",
-							true);
 				}
+				else{
+					Reporter.log("<table><tr><th><font color='red'><b>ERROR: </b></th><td> Object (" + obj
+							+ ") not found in the Application </td></tr></table> ", true);
+				}
+					
 				Reporter.log("</td></table>", true);
 
 			}
-				Reporter.log("</td></table>", true);
-
 		} else {
 
 			Reporter.log(
-					"</br><table><tr><th><b>TEST STATUS :</b></th><td> FAILED -- Please Check Username and Password </td></tr></table>",
+					"</br><table><tr><th><b>TEST STATUS :</b></th><td> FAILED -- Incorrect Username or Password </td></tr></table>",
 					true);
 		}
 		Reporter.log("</body></html>", true);
