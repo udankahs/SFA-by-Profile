@@ -35,8 +35,8 @@ public class SFDCLogin {
 		this.driver = driver;
 	}
 
-	public void login(String un, String pw) throws InterruptedException {
-		driver.get("https://test.salesforce.com");
+	public void login(String un, String pw, String URL) throws InterruptedException {
+		driver.get(URL);
 		unTextBox.sendKeys(un);
 		pwTextBox.sendKeys(pw);
 		loginButton.click();
@@ -49,10 +49,10 @@ public class SFDCLogin {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		if (errorDisplayed) {
-			Reporter.log("<table><tr><th><b>Login Status: </th><td bgcolor='#FF0000'><b>Login Failed</b></td></tr></table>", true);
+			Reporter.log("<table><tr><th bgcolor='#00b2b3'><b>Login Status: </th><td><b>Login Failed</b></td></tr></table>", true);
 			loginSuccess = false;
 		} else {
-			Reporter.log("<table><tr><th><b>Login Status: </th ><td bgcolor='#00FF00'><b>Login Successfull</b></td></tr></table>",true);
+			Reporter.log("<table><tr><th bgcolor='#00b2b3'><b>Login Status: </th ><td><b>Login Successfull</b></td></tr></table>",true);
 			loginSuccess = true;
 		}
 		return loginSuccess;

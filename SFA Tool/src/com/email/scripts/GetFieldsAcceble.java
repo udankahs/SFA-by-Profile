@@ -27,38 +27,47 @@ public class GetFieldsAcceble extends SFASuperTestNG {
 		String folderPath = JarPath.substring(0, JarPath.lastIndexOf("/") + 1);
 		String decodedPath = URLDecoder.decode(folderPath, "UTF-8");
 
-		String masterXlPath = decodedPath + "Data Sheet/Data Sheet.xls";
+		String dataSheetPath = decodedPath + "Data Sheet/Data Sheet.xls";
 		String sheetName = "Login";
 
-		String uname = ExcelLib.getCellValue(masterXlPath, sheetName, 1, 0);
-		String password = ExcelLib.getCellValue(masterXlPath, sheetName, 1, 1);
+		String uname = ExcelLib.getCellValue(dataSheetPath, sheetName, 1, 0);
+		String password = ExcelLib.getCellValue(dataSheetPath, sheetName, 1, 1);
+		String URL = "https://test.salesforce.com";
+		if (ExcelLib.getCellValue(dataSheetPath, sheetName, 1, 4).equals("Sandbox"))
+		{
+			URL="https://test.salesforce.com";
+		}
+		else if (ExcelLib.getCellValue(dataSheetPath, sheetName, 1, 4).equals("Production"))
+		{
+			URL="https://login.salesforce.com";
+		}
 		String obj = null;
-		String fieldXlPath = null;
+		String baselineSheetPath = null;
 
 		Reporter.log(
 				"<html><head><style>table, th, td { border: 1px solid black; border-collapse: collapse;}</style></head><body>",
 				true);
-		loginPage.login(uname, password);
+		loginPage.login(uname, password, URL);
 
 		if (loginPage.verifyLogin()) {
-			int objCount = ExcelLib.getRowCountofColumn(masterXlPath, sheetName, 2);
+			int objCount = ExcelLib.getRowCountofColumn(dataSheetPath, sheetName, 2);
 
-			Reporter.log("<table><tr><th><b> Number of Objects taken for this Execution: </b></th><td>  " + --objCount
+			Reporter.log("<table><tr><th bgcolor='#00b2b3'><b> Number of Objects taken for this Execution: </b></th><td>  " + --objCount
 					+ "  </td></tr></table></br>", true);
 
 			for (int i = 1; i <=objCount; i++) {
-				obj = ExcelLib.getCellValue(masterXlPath, sheetName, i, 2);
+				obj = ExcelLib.getCellValue(dataSheetPath, sheetName, i, 2);
 
 				Reporter.log("</br><table>", true);
-				Reporter.log("<tr><th bgcolor='#4B0082'><b>OBJECT TESTING: </b>" + obj + "</th><td>", true);
+				Reporter.log("<tr><th bgcolor='#d57676'><b>OBJECT TESTING: </b>" + obj + "</th><td>", true);
 
 				fieldAccebility.gotoFieldAaccebilty();
 				if (fieldAccebility.gotoObjAaccebilty(obj)) {
 
-					fieldXlPath = decodedPath + "Baseline Data/Baseline Excel_" + obj + ".xls";
+					baselineSheetPath = decodedPath + "Baseline Data/Baseline Excel_" + obj + ".xls";
 
 					if (ExcelLib.isFileExists(decodedPath + "/Baseline Data/", "Baseline Excel_" + obj + ".xls")) {
-						fieldAccebility.getFieldAaccebilty(obj, masterXlPath, fieldXlPath);
+						fieldAccebility.getFieldAaccebilty(obj, dataSheetPath, baselineSheetPath);
 
 					} else {
 

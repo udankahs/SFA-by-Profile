@@ -28,7 +28,7 @@ import com.lib.ExcelLib;
 public class gotoFieldAccebility {
 	private WebDriver driver;
 
-	@FindBy(id = "setupLink")
+	@FindBy(xpath = "//a[(text()='Setup')]")
 	private WebElement Setup;
 
 	@FindBy(id = "userNavLabel")
@@ -58,7 +58,7 @@ public class gotoFieldAccebility {
 	String Result, Color = null;
 
 	int baselineProfileIndex = 0;
-	int noOfColumns = 0;
+	int noOfColumnsInBaselineSheet = 0;
 	int passCount, failCount;
 
 	public gotoFieldAccebility(WebDriver driver) {
@@ -68,7 +68,7 @@ public class gotoFieldAccebility {
 
 	public void gotoFieldAaccebilty() {
 		driver.manage().timeouts().implicitlyWait(0, TimeUnit.MILLISECONDS);
-		boolean setupLinkExists = driver.findElements(By.id("setupLink")).size() > 0;
+		boolean setupLinkExists = driver.findElements(By.xpath("//a[(text()='Setup')]")).size() > 0;
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		if (setupLinkExists) {
@@ -101,29 +101,29 @@ public class gotoFieldAccebility {
 		return validObject;
 	}
 
-	public void getFieldAaccebilty(String obj, String objxlPath, String fieldXlpath)
+	public void getFieldAaccebilty(String obj, String dataSheetPath, String baselineSheetPath)
 			throws InterruptedException, InvalidFormatException, FileNotFoundException, IOException {
 
-		int recTypeCount = ExcelLib.getRowCountofColumn(objxlPath, obj, 0);
+		int recTypeCount = ExcelLib.getRowCountofColumn(dataSheetPath, obj, 0);
 		Reporter.log("<table>", true);
 		for (int i = 1; i < recTypeCount; i++) {
 			Reporter.log("<tr><td>", true);
-			rcdType = ExcelLib.getCellValue(objxlPath, obj, i, 0);
-			Reporter.log("<table><tr><th>RECORD TYPE: " + rcdType + "</th></tr><tr><td>", true);
+			rcdType = ExcelLib.getCellValue(dataSheetPath, obj, i, 0);
+			Reporter.log("<table><tr><th bgcolor='#76a1ef'>RECORD TYPE: " + rcdType + "</th></tr><tr><td>", true);
 			try {
 
 				new Select(RecordType).selectByVisibleText(rcdType);
 				Thread.sleep(5000);
 
-				noOfColumns = WorkbookFactory.create(new FileInputStream(fieldXlpath)).getSheet(rcdType).getRow(0)
+				noOfColumnsInBaselineSheet = WorkbookFactory.create(new FileInputStream(baselineSheetPath)).getSheet(rcdType).getRow(0)
 						.getPhysicalNumberOfCells();
-				int profileCount = ExcelLib.getRowCountofColumn(objxlPath, obj, 1);
+				int profileCount = ExcelLib.getRowCountofColumn(dataSheetPath, obj, 1);
 				for (int k = 1; k < profileCount; k++) {
 
-					profile = ExcelLib.getCellValue(objxlPath, obj, k, 1);
-					Reporter.log("<table><tr><th><b>PROFILE: " + profile + "</b></th></tr>", true);
-					for (int l = 1; l < noOfColumns; l++) {
-						if (ExcelLib.getCellValue(fieldXlpath, rcdType, 0, l).equals(profile)) {
+					profile = ExcelLib.getCellValue(dataSheetPath, obj, k, 1);
+					Reporter.log("<table><tr><th bgcolor='#ff6a33'><b>PROFILE: " + profile + "</b></th></tr>", true);
+					for (int l = 1; l < noOfColumnsInBaselineSheet; l++) {
+						if (ExcelLib.getCellValue(baselineSheetPath, rcdType, 0, l).equals(profile)) {
 							BaselineProfile = profile;
 							baselineProfileIndex = l;
 							break;
@@ -141,22 +141,22 @@ public class gotoFieldAccebility {
 							int profileIndex = allProfile.indexOf(option);
 
 							try {
-								int fieldCount = ExcelLib.getRowCount(fieldXlpath, rcdType);
-
+								int fieldCount = ExcelLib.getRowCount(baselineSheetPath, rcdType);
+								System.out.println(fieldCount);
 								Reporter.log(
 										"<table><tr bgcolor='#2EB8E6'><th>Fields</th><th>Source (Baseline Excel)  </th><th>Target (Application)  </th><th>Result</th></tr>");
 
 								passCount = 0;
 								failCount = 0;
 								for (int j = 1; j < fieldCount; j++) {
-									field = ExcelLib.getCellValue(fieldXlpath, rcdType, j, 0);
+									field = ExcelLib.getCellValue(baselineSheetPath, rcdType, j, 0);
 									try {
 										targetState = driver
 												.findElement(By.xpath(
 														"//th[text()='" + field + "']/../td[" + profileIndex + "]/a"))
 												.getText();
 
-										SourceState = ExcelLib.getCellValue(fieldXlpath, rcdType, j,
+										SourceState = ExcelLib.getCellValue(baselineSheetPath, rcdType, j,
 												baselineProfileIndex);
 										if (SourceState.equals(targetState)) {
 											Result = "PASS";
@@ -182,7 +182,7 @@ public class gotoFieldAccebility {
 
 								Reporter.log("</tr></table></br>");
 
-								Reporter.log("<table><tr><th>Pass Count : " + passCount + "</th><th>Fail Count : "
+								Reporter.log("<table><tr><th bgcolor='green' >Pass Count : " + passCount + "</th><th bgcolor='red'>Fail Count : "
 										+ failCount + "</th></tr></table></br>");
 
 							} catch (NullPointerException e) {
