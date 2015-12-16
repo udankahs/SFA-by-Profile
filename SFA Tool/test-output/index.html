@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\266241\AppData\Local\Temp\testng-eclipse-1880080986\testng-customsuite.xml</span>
+                    <span>C:\Users\udankahs\AppData\Local\Temp\testng-eclipse--1710121937\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.email.scripts.GetFieldsAcceble" hash-for-method="getFields">getFields</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,9 +116,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+          <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.email.scripts.GetFieldsAcceble</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -127,66 +127,14 @@
                   <a name="getFields">
                   </a> <!-- getFields -->
                   <span class="method-name">getFields</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome=47.0.2526.16)
-  (Driver info: chromedriver=2.19.346078 (6f1f0cde889532d48ce8242342d0b84f94b114a1),platform=Windows NT 6.1 SP1 x86) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20 milliseconds
-Build info: version: &apos;2.48.2&apos;, revision: &apos;41bccdd&apos;, time: &apos;2015-10-09 19:59:12&apos;
-System info: host: &apos;PC207713&apos;, ip: &apos;10.74.121.87&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_66&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={userDataDir=C:\Users\266241\AppData\Local\Temp\scoped_dir10176_21025}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=47.0.2526.16, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 79ba46a06556863006d90c89714e908d
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy6.click(Unknown Source)
-	at com.email.pom.gotoFieldAccebility.gotoFieldAaccebilty(gotoFieldAccebility.java:75)
-	at com.email.scripts.GetFieldsAcceble.getFields(GetFieldsAcceble.java:64)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:773)
-	at org.testng.TestRunner.run(TestRunner.java:623)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
-	at org.testng.TestNG.run(TestNG.java:1018)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\266241\AppData\Local\Temp\testng-eclipse-1880080986\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\udankahs\AppData\Local\Temp\testng-eclipse--1710121937\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -239,12 +187,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'getFields')
 data.setCell(0, 2, 'com.email.scripts.GetFieldsAcceble')
-data.setCell(0, 3, 25871);
+data.setCell(0, 3, 197051);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 25 seconds</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -262,7 +210,37 @@ return data;
                 <span class="reporter-method-output"><table><tr><th bgcolor='#00b2b3'><b>Login Status: </th ><td><b>Login Successfull</b></td></tr></table></span>
                 <span class="reporter-method-output"><table><tr><th bgcolor='#00b2b3'><b> Number of Objects taken for this Execution: </b></th><td>  1  </td></tr></table></br></span>
                 <span class="reporter-method-output"></br><table></span>
-                <span class="reporter-method-output"><tr><th bgcolor='#d57676'><b>OBJECT TESTING: </b>Account</th><td></span>
+                <span class="reporter-method-output"><tr><th bgcolor='#d57676'><b>OBJECT TESTING: </b>Call</th><td></span>
+                <span class="reporter-method-output"><table></span>
+                <span class="reporter-method-output"><tr><td></span>
+                <span class="reporter-method-output"><table><tr><th bgcolor='#76a1ef'>RECORD TYPE: HCP Detail Call</th></tr><tr><td></span>
+                <span class="reporter-method-output"><table><tr><th bgcolor='#ff6a33'><b>PROFILE: Abbott CAM Administrator</b></th></tr></span>
+                <span class="reporter-method-output"><table><tr bgcolor='#2EB8E6'><th>Fields</th><th>Source (Baseline Excel)  </th><th>Target (Application)  </th><th>Result</th></tr></span>
+                <span class="reporter-method-output"><tr><th bgcolor='gray'><b>24 X 7 nurse phone support</b></th><td> Editable</td><td>Editable</td><th> <font color='green'><b> PASS </b></font><br/></th></tr></span>
+                <span class="reporter-method-output"><tr><th bgcolor='gray'><b>360 View</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr></span>
+                <span class="reporter-method-output"><tr><th bgcolor='gray'><b>Account</b></th><td> Required</td><td>Required</td><th> <font color='green'><b> PASS </b></font><br/></th></tr></span>
+                <span class="reporter-method-output"><tr><th bgcolor='gray'><b>Account Plan</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr></span>
+                <span class="reporter-method-output"><tr><th bgcolor='gray'><b>Activity Type</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr></span>
+                <span class="reporter-method-output"><tr><th bgcolor='gray'><b>Add Detail</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr></span>
+                <span class="reporter-method-output"><tr><th bgcolor='gray'><b>Add Key Message</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr></span>
+                <span class="reporter-method-output"><tr><th bgcolor='gray'><b>Address</b></th><td> Required</td><td>Required</td><th> <font color='green'><b> PASS </b></font><br/></th></tr></span>
+                <span class="reporter-method-output"><tr><th bgcolor='gray'><b>Address Line 1</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr></span>
+                <span class="reporter-method-output"><tr><th bgcolor='gray'><b>Address Line 2</b></th><td> Hidden</td><td>Hidden</td><th> <font color='green'><b> PASS </b></font><br/></th></tr></span>
+                <span class="reporter-method-output"></tr></table></br></span>
+                <span class="reporter-method-output"><table><tr><th bgcolor='green' >Pass Count : 10</th><th bgcolor='red'>Fail Count : 0</th></tr></table></br></span>
+                <span class="reporter-method-output"><table><tr><th bgcolor='#ff6a33'><b>PROFILE: Invalid Call Profile</b></th></tr></span>
+                <span class="reporter-method-output"></span>
+                <span class="reporter-method-output"><table><tr><th><font color='red'><b>ERROR: </b></th><td> Profile (Invalid Call Profile) not found in the Application </td></tr></table></span>
+                <span class="reporter-method-output"></td></tr></table></span>
+                <span class="reporter-method-output"><tr><td></span>
+                <span class="reporter-method-output"><table><tr><th bgcolor='#76a1ef'>RECORD TYPE: random Call</th></tr><tr><td></span>
+                <span class="reporter-method-output"></span>
+                <span class="reporter-method-output"><table><tr><th><font color='red'><b>ERROR: </b></th><td> Record Type (random Call) not found in the Application </td></tr></table></br></span>
+                <span class="reporter-method-output"></td></tr></table></span>
+                <span class="reporter-method-output"></table></span>
+                <span class="reporter-method-output"></td></table></span>
+                <span class="reporter-method-output"></td></table></span>
+                <span class="reporter-method-output"></body></html></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -286,14 +264,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">getFields</span>
-                <span class="method-start">3974 ms</span>
+                <span class="method-start">5892 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">postCondition</span>
-                <span class="method-start">29853 ms</span>
+                <span class="method-start">202945 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

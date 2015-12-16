@@ -28,7 +28,7 @@ import com.lib.ExcelLib;
 public class gotoFieldAccebility {
 	private WebDriver driver;
 
-	@FindBy(xpath = "//a[(text()='Setup')]")
+	@FindBy(id = "setupLink")
 	private WebElement Setup;
 
 	@FindBy(id = "userNavLabel")
@@ -67,8 +67,8 @@ public class gotoFieldAccebility {
 	}
 
 	public void gotoFieldAaccebilty() {
-		driver.manage().timeouts().implicitlyWait(0, TimeUnit.MILLISECONDS);
-		boolean setupLinkExists = driver.findElements(By.xpath("//a[(text()='Setup')]")).size() > 0;
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		boolean setupLinkExists = driver.findElements(By.id("setupLink")).size() > 0;
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		if (setupLinkExists) {
@@ -84,7 +84,7 @@ public class gotoFieldAccebility {
 
 	public boolean gotoObjAaccebilty(String Obj) throws InterruptedException {
 		boolean validObject;
-		driver.manage().timeouts().implicitlyWait(0, TimeUnit.MILLISECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		boolean objExists = driver.findElements(By.xpath("//*[@id='bodyCell']/ul//a[text()='" + Obj + "']")).size() > 0;
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -151,10 +151,19 @@ public class gotoFieldAccebility {
 								for (int j = 1; j < fieldCount; j++) {
 									field = ExcelLib.getCellValue(baselineSheetPath, rcdType, j, 0);
 									try {
-										targetState = driver
-												.findElement(By.xpath(
-														"//th[text()='" + field + "']/../td[" + profileIndex + "]/a"))
-												.getText();
+										String xpath=null;
+										driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+										boolean DevEdition = driver.findElements(By.xpath("//title[contains(text(),'Developer Edition')]")).size() > 0;
+										driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+										if (DevEdition)
+										{
+											xpath="//div[@style='display: block;']//th[text()='" + field + "']/../td[" + profileIndex + "]/a";
+										}
+										else{
+											xpath="//th[text()='" + field + "']/../td[" + profileIndex + "]/a";
+										}
+									
+										targetState = driver.findElement(By.xpath(xpath)).getText();
 
 										SourceState = ExcelLib.getCellValue(baselineSheetPath, rcdType, j,
 												baselineProfileIndex);
