@@ -6,7 +6,7 @@ import java.net.URLDecoder;
 
 import org.testng.Reporter;
 import com.email.pom.SFDCLogin;
-import com.email.pom.gotoFieldAccebility;
+import com.email.pom.gotoFieldAccebilityTest;
 import com.lib.ExcelLib;
 
 /* 
@@ -21,7 +21,7 @@ public class GetFieldsAcceble extends SFASuperTestNG {
 	@Test
 	public void getFields() throws Exception {
 		SFDCLogin loginPage = new SFDCLogin(driver);
-		gotoFieldAccebility fieldAccebility = new gotoFieldAccebility(driver);
+		gotoFieldAccebilityTest fieldAccebility = new gotoFieldAccebilityTest(driver);
 
 		String JarPath = GetFieldsAcceble.class.getProtectionDomain().getCodeSource().getLocation().getPath();
 		String folderPath = JarPath.substring(0, JarPath.lastIndexOf("/") + 1);
