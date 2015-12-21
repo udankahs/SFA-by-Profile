@@ -6,7 +6,7 @@ import java.net.URLDecoder;
 
 import org.testng.Reporter;
 import com.email.pom.SFDCLogin;
-import com.email.pom.gotoFieldAccebilityTest;
+import com.email.pom.gotoFieldAccebility;
 import com.lib.ExcelLib;
 
 /* 
@@ -21,7 +21,7 @@ public class GetFieldsAcceble extends SFASuperTestNG {
 	@Test
 	public void getFields() throws Exception {
 		SFDCLogin loginPage = new SFDCLogin(driver);
-		gotoFieldAccebilityTest fieldAccebility = new gotoFieldAccebilityTest(driver);
+		gotoFieldAccebility fieldAccebility = new gotoFieldAccebility (driver);
 
 		String JarPath = GetFieldsAcceble.class.getProtectionDomain().getCodeSource().getLocation().getPath();
 		String folderPath = JarPath.substring(0, JarPath.lastIndexOf("/") + 1);
@@ -33,11 +33,11 @@ public class GetFieldsAcceble extends SFASuperTestNG {
 		String uname = ExcelLib.getCellValue(dataSheetPath, sheetName, 1, 0);
 		String password = ExcelLib.getCellValue(dataSheetPath, sheetName, 1, 1);
 		String URL = "https://test.salesforce.com";
-		if (ExcelLib.getCellValue(dataSheetPath, sheetName, 1, 4).equals("Sandbox"))
+		if (ExcelLib.getCellValue(dataSheetPath, sheetName, 1, 4).equalsIgnoreCase("Sandbox"))
 		{
 			URL="https://test.salesforce.com";
 		}
-		else if (ExcelLib.getCellValue(dataSheetPath, sheetName, 1, 4).equals("Production"))
+		else if (ExcelLib.getCellValue(dataSheetPath, sheetName, 1, 4).equalsIgnoreCase("Production"))
 		{
 			URL="https://login.salesforce.com";
 		}
